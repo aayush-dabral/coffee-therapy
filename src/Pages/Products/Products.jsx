@@ -151,61 +151,61 @@ const Products = () => {
                   <ul className="sm:w-[36%] px-4 sm:pl-6">
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>DOPPIO</div>
+                        <div>Iced Americano</div>
+                        <div>149</div>
+                      </div>
+                    </li>
+                    <li className="list-item mt-4">
+                      <div className="flex justify-between">
+                        <div>CAFE CON HIELO</div>
+                        <div>149</div>
+                      </div>
+                    </li>
+                    <li className="list-item mt-4">
+                      <div className="flex justify-between">
+                        <div>ICED CUPPACCINO</div>
                         <div>159</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>AMERICANO</div>
-                        <div>159</div>
+                        <div>ICED LATTE</div>
+                        <div>169</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>CAPPUCCINO</div>
-                        <div>159</div>
+                        <div>ICED MOCHA</div>
+                        <div>169</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>CAFE LATTE</div>
-                        <div>159</div>
-                      </div>
-                    </li>
-                    <li className="list-item mt-4">
-                      <div className="flex justify-between">
-                        <div>FLAT WHITE</div>
-                        <div>159</div>
-                      </div>
-                    </li>
-                    <li className="list-item mt-4">
-                      <div className="flex justify-between">
-                        <div>MACCHIATO</div>
-                        <div>159</div>
+                        <div>ICED WHITE MOCHA</div>
+                        <div>169</div>
                       </div>
                     </li>
                   </ul>
                   <ul className="sm:w-[36%] px-4 sm:pl-6">
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>PICOLLO LATTE</div>
-                        <div>159</div>
+                        <div>COFFEE CRAN</div>
+                        <div>179</div>
+                      </div>
+                    </li>
+                    <li className="list-item mt-4">
+                      <div className="flex justify-between gap-2">
+                        <div className="flex text-left w-[80%]">FRIZZEE STRAWBERRY COFFEE</div>
+                        <div>179</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>LUNGO</div>
+                        <div>CLASSIC COLD COFFEE</div>
                         <div>159</div>
                       </div>
                     </li>
-                    <li className="list-item mt-4">
-                      <div className="flex justify-between">
-                        <div>MOCHA DARK</div>
-                        <div>159</div>
-                      </div>
-                    </li>
-                    <li className="list-item mt-4">
+                    {/* <li className="list-item mt-4">
                       <div className="flex justify-between">
                         <div>WHITE MOCHA</div>
                         <div>159</div>
@@ -222,7 +222,7 @@ const Products = () => {
                         <div>NUTELLA MOCHA</div>
                         <div>159</div>
                       </div>
-                    </li>
+                    </li> */}
                   </ul>
                 </>
               ) : (
@@ -230,55 +230,55 @@ const Products = () => {
                   <ul className="sm:w-[36%] px-4 sm:pl-6">
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>DOPPIO</div>
-                        <div>159</div>
+                        <div>AEROPRESS</div>
+                        <div>179</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>AMERICANO</div>
-                        <div>159</div>
+                        <div>ICED AEROPRESS</div>
+                        <div>189</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>CAPPUCCINO</div>
-                        <div>159</div>
+                        <div className="w-[65%] text-left text-wrap">V-60 POUR OVER</div>
+                        <div>179-189</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>CAFE LATTE</div>
-                        <div>159</div>
+                        <div className="w-[65%] text-left text-wrap">ICED V-60 POUR OVER</div>
+                        <div>189-199</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>FLAT WHITE</div>
-                        <div>159</div>
+                        <div>FRENCH PRESS</div>
+                        <div>179</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>MACCHIATO</div>
-                        <div>159</div>
+                        <div>CHEMEX</div>
+                        <div>209</div>
                       </div>
                     </li>
                   </ul>
                   <ul className="sm:w-[36%] px-4 sm:pl-6">
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>PICOLLO LATTE</div>
-                        <div>159</div>
+                        <div>ICED CHEMEX</div>
+                        <div>219</div>
                       </div>
                     </li>
                     <li className="list-item mt-4">
                       <div className="flex justify-between">
-                        <div>LUNGO</div>
-                        <div>159</div>
+                        <div>SOUTH INDIAN FILTER</div>
+                        <div>149</div>
                       </div>
                     </li>
-                    <li className="list-item mt-4">
+                    {/* <li className="list-item mt-4">
                       <div className="flex justify-between">
                         <div>MOCHA DARK</div>
                         <div>159</div>
@@ -301,7 +301,7 @@ const Products = () => {
                         <div>NUTELLA MOCHA</div>
                         <div>159</div>
                       </div>
-                    </li>
+                    </li> */}
                   </ul>
                 </>
               )}
