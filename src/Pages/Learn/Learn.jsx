@@ -1,4 +1,9 @@
 import { useState } from "react";
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react";
+import scrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(scrollTrigger)
 
 import heroBg from "../../assets/images/learn/heroBg.png";
 import espressoBg from "../../assets/images/learn/espressoBg.png";
@@ -14,16 +19,256 @@ const Learn = () => {
   const [farmView, setFarmView] = useState(false);
   const [espressoView, setEspressoView] = useState(false);
 
+  useGSAP(() =>{
+    gsap.from(".main-screen", {
+      scrollTrigger: ".main-screen",
+      ease: true,
+      opacity: 0,
+      delay: 0,
+      duration: 1
+    })
+    gsap.from(".homeText1", {
+      scrollTrigger: ".homeText1",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.4
+    })
+    gsap.from(".homeText2", {
+      scrollTrigger: ".homeText1",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.6
+    })
+
+    gsap.from(".summaryheading", {
+      scrollTrigger: ".summaryheading",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".summaryLine", {
+      scrollTrigger: {
+        trigger: ".summaryheading",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.2,
+      duration: 0.3
+    })
+    gsap.from(".summaryText", {
+      scrollTrigger: {
+        trigger: ".summaryheading",
+        start: "top 75%", 
+      },
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.4
+    })
+
+    gsap.from(".espHeading", {
+      scrollTrigger: ".espHeading",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".espLine", {
+      scrollTrigger: {
+        trigger: ".espLine",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.4,
+      duration: 0.3
+    })
+    gsap.from(".espText", {
+      scrollTrigger: {
+        trigger: ".espText",
+        start: "top 75%", 
+      },
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.6
+    })
+    
+    gsap.from(".v60Heading", {
+      scrollTrigger: ".v60Heading",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".v60Line", {
+      scrollTrigger: {
+        trigger: ".v60Line",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.4,
+      duration: 0.3
+    })
+    gsap.from(".v60Buttons", {
+      scrollTrigger: ".v60Buttons",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.5
+    })
+    gsap.from(".v60Text", {
+      scrollTrigger: {
+        trigger: ".espText",
+        start: "top 75%", 
+      },
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.6
+    })
+
+    gsap.from(".frenchHeading", {
+      scrollTrigger: ".frenchHeading",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".frenchLine", {
+      scrollTrigger: {
+        trigger: ".frenchLine",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.4,
+      duration: 0.3
+    })
+    gsap.from(".frenchText", {
+      scrollTrigger: {
+        trigger: ".frenchText",
+        start: "top 75%", 
+      },
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.6
+    })
+
+    gsap.from(".coldHeading", {
+      scrollTrigger: ".coldHeading",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".coldLine", {
+      scrollTrigger: {
+        trigger: ".coldLine",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.4,
+      duration: 0.3
+    })
+    gsap.from(".coldText", {
+      scrollTrigger: {
+        trigger: ".coldText",
+        start: "top 75%", 
+      },
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.6
+    })
+
+    gsap.from(".aeroHeading", {
+      scrollTrigger: ".aeroHeading",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".aeroLine", {
+      scrollTrigger: {
+        trigger: ".coldLine",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.4,
+      duration: 0.3
+    })
+
+    gsap.from(".aero1", {
+      scrollTrigger: {
+        trigger: ".aero1",
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.05 ,
+      delay: 0.2,
+      duration: 0.2
+    })
+    gsap.from(".aero2", {
+      scrollTrigger: {
+        trigger: ".aero1",
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.05 ,
+      delay: 0.3,
+      duration: 0.2
+    })
+    gsap.from(".aero3", {
+      scrollTrigger: {
+        trigger: ".aero1",
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.05 ,
+      delay: 0.4,
+      duration: 0.2
+    })
+    gsap.from(".aeroText", {
+      scrollTrigger: {
+        trigger: ".aeroText",
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.05 ,
+      delay: 0.2,
+      duration: 0.2
+    })
+  })
+  
   return (
-    <div className="font-poppins text-white">
+    <div className="main-screen font-poppins text-white">
       <div
         className="flex flex-col items-center justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-center text-white text-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="text-[49.44px] sm:text-[74.16px] font-anton">
+        <div className="homeText1 text-[49.44px] sm:text-[74.16px] font-anton">
           BREWING BASICS
         </div>
-        <div className="text-[18.88px] sm:text-[23.6px] w-[90%] md:w-[70%] mt-4 font-medium">
+        <div className="homeText2 text-[18.88px] sm:text-[23.6px] w-[90%] md:w-[70%] mt-4 font-medium">
           Unlock the essence of coffee: Explore its origins, master espresso,
           pour perfection with V60 and Aeropress, chill with cold brew, and
           savor the simplicity of French press.
@@ -33,16 +278,16 @@ const Learn = () => {
       <div className="mt-12 bg-cover bg-center py-20">
         <div className="flex justify-between items-center w-[90%] sm:w-[80%] mx-auto">
           <div className="text-white">
-            <div className="font-anton text-[45.83px]">FARM TO CUP</div>
-            <div className="w-[30%] sm:w-[9%] h-[2px] text- bg-white -mt-1" />
-            <div className="w-full mt-8 text-justify text-[16.5px] leading-[2.3] my-8">
+            <div className="summaryheading font-anton text-[45.83px]">FARM TO CUP</div>
+            <div className="summaryLine w-[30%] sm:w-[9%] h-[2px] text- bg-white -mt-1" />
+            <div className="summaryText w-full mt-8 text-justify text-[16.5px] leading-[2.3] my-8">
               Bringing a beautiful cup of coffee to your table needs lot of work
               and attention to detail. Coffee cherries need certain region,
               temperatures and elevations to grow as desired. The steps that go
               into it are:
             </div>
 
-            <div className="hidden lg:flex justify-between w-full mt-4 text-pretty text-[16.5px] leading-[1.8]">
+            <div className="summaryText hidden lg:flex justify-between w-full mt-4 text-pretty text-[16.5px] leading-[1.8]">
               <div className="w-1/3 border-r pr-16 pl-4">
                 <ul className="list-disc">
                   <li> Coffee cherries are plucked by hands and sorted. </li>
@@ -87,7 +332,7 @@ const Learn = () => {
               </div>
             </div>
 
-            <div className="sm:hidden w-full pl-4  text-justify text-[16.5px] leading-[2.3]">
+            <div className="summaryText sm:hidden w-full pl-4  text-justify text-[16.5px] leading-[2.3]">
               <ul className="list-disc list-inside">
                 <li> Coffee cherries are plucked by hands and sorted. </li>
                 <li className="mt-4">
@@ -130,7 +375,7 @@ const Learn = () => {
               </div>
             </div>
 
-            <div className="sm:hidden mt-8 text-center text-[20.5px] leading-[2.3]">
+            <div className="summaryText sm:hidden mt-8 text-center text-[20.5px] leading-[2.3]">
               {!farmView ? (
                 <div className="flex justify-center gap-2 w-full ">
                   <div
@@ -164,9 +409,9 @@ const Learn = () => {
       >
         <div className="flex justify-between items-center w-[90%] sm:w-[80%] mx-auto">
           <div className="text-white">
-            <div className="font-anton text-[45.83px]">ESPRESSO</div>
-            <div className="w-[30%] sm:w-[9%] h-[2px] text- bg-white -mt-1" />
-            <div className="w-full mt-8 text-justify text-[16.5px] leading-[2.3]">
+            <div className="espHeading font-anton text-[45.83px]">ESPRESSO</div>
+            <div className="espLine w-[30%] sm:w-[9%] h-[2px] text- bg-white -mt-1" />
+            <div className="espText w-full mt-8 text-justify text-[16.5px] leading-[2.3]">
               Espresso, the quintessential embodiment of coffee culture, is a
               concentrated shot of caffeinated bliss. Crafted with meticulous
               precision and finesse, it boasts a robust and intense flavor
@@ -184,15 +429,15 @@ const Learn = () => {
 
       <div className="flex flex-col sm:flex-row justify-between items-start w-[90%] sm:w-[70%] sm:h-[600px] mx-auto mt-12 pb-12 sm:pb-0">
         <div className="sm:w-[58%] text-white">
-          <div className="font-anton text-[45.83px] text-center sm:text-left">
+          <div className="v60Heading font-anton text-[45.83px] text-center sm:text-left">
             V60 POUR OVER
           </div>
-          <div className="w-[19%] h-[2px] bg-white -mt-1 hidden sm:block" />
+          <div className="v60Line w-[19%] h-[2px] bg-white -mt-1 hidden sm:block" />
           <img
             src={v60}
             className="sm:hidden sm:h-[500px] ml-auto mt-4 sm:-mt-12"
           />
-          <div className="flex justify-center sm:justify-start gap-4 mt-8">
+          <div className="v60Buttons flex justify-center sm:justify-start gap-4 mt-8">
             <button
               onClick={() => setv60State("hot")}
               className={`w-20 ${
@@ -214,7 +459,7 @@ const Learn = () => {
               Iced
             </button>
           </div>
-          <div className="text-[16.5px] text-justify font-poppins font-light mt-8 ">
+          <div className="v60Text text-[16.5px] text-justify font-poppins font-light mt-8 ">
             {v60State === "hot" ? (
               <ul className="list-disc pl-6">
                 <li>
@@ -306,15 +551,15 @@ const Learn = () => {
           <img src={french} className="h-[500px] mr-auto -mt-12" />
         </div>
         <div className="sm:w-[58%] text-white">
-          <div className="font-anton text-[45.83px] text-center sm:text-left">
+          <div className="frenchHeading font-anton text-[45.83px] text-center sm:text-left">
             FRENCH PRESS
           </div>
           <img
             src={french}
             className="sm:hidden sm:h-[500px] mr-auto mt-4 sm:-mt-12"
           />
-          <div className="hidden sm:block w-[19%] h-[2px] bg-white sm:-mt-1" />
-          <div className="text-[16.5px] text-justify font-poppins font-light mt-8 ">
+          <div className="frenchLine hidden sm:block w-[19%] h-[2px] bg-white sm:-mt-1" />
+          <div className="frenchText text-[16.5px] text-justify font-poppins font-light mt-8 ">
             <ul className="list-disc pl-6">
               <li>
                 <span className="font-bold">Brew Temperature :</span> 80-99°C
@@ -361,15 +606,15 @@ const Learn = () => {
 
       <div className="flex justify-between items-center w-[90%] sm:w-[70%] sm:h-[600px] mx-auto mt- 12pb-12 sm:pb-0">
         <div className="sm:w-[58%] text-white">
-          <div className="font-anton text-[45.83px] text-center sm:text-left">
+          <div className="coldHeading font-anton text-[45.83px] text-center sm:text-left">
             COLD BREW
           </div>
           <img
             src={coldBrew}
             className="sm:hidden sm:h-[500px] mx-auto mt-4 "
           />
-          <div className="w-[19%] h-[2px] bg-white -mt-1" />
-          <div className="text-[17.5px] text-justify font-poppins mt-8 ">
+          <div className="coldLine w-[19%] h-[2px] bg-white -mt-1" />
+          <div className="coldText text-[17.5px] text-justify font-poppins mt-8 ">
             <ul className="list-disc pl-6">
               <li>
                 <span className="font-bold">Grind Size:</span> Coarse
@@ -414,14 +659,14 @@ const Learn = () => {
       >
         <div className="flex justify-between items-start w-[90%] sm:w-[70%] mx-auto mt-12 ">
           <div className="w-[48% w-full  text-white py-12">
-            <div className="sm:w-[48%] font-anton text-[45.83px] ">
+            <div className="aeroHeading sm:w-[48%] font-anton text-[45.83px] ">
               AEROPRESS
             </div>
-            <div className="w-[9%] h-[2px] bg-white -mt-1" />
+            <div className="aeroLine w-[9%] h-[2px] bg-white -mt-1" />
             <div className="sm:w-[48%] flex gap-4 mt-8">
               <button
                 onClick={() => setColdState("hot-inverted")}
-                className={`w-32 py-1 ${
+                className={`aero1 w-32 py-1 ${
                   coldState === "hot-inverted"
                     ? "bg-white text-black font-semibold"
                     : "bg-transparent text-white border-2 border-white"
@@ -431,7 +676,7 @@ const Learn = () => {
               </button>
               <button
                 onClick={() => setColdState("hot-regular")}
-                className={`w-32 py-1 ${
+                className={`aero2 w-32 py-1 ${
                   coldState === "hot-regular"
                     ? "bg-white text-black font-semibold"
                     : "bg-transparent text-white border-2 border-white"
@@ -441,7 +686,7 @@ const Learn = () => {
               </button>
               <button
                 onClick={() => setColdState("iced-regular")}
-                className={`w-32 py-1 ${
+                className={`aero3 w-32 py-1 ${
                   coldState === "iced-regular"
                     ? "bg-white text-black font-semibold"
                     : "bg-transparent text-white border-2 border-white"
@@ -450,7 +695,7 @@ const Learn = () => {
                 Iced Regular
               </button>
             </div>
-            <div className="w-[88%  text-[16.5px] text-justify flex flex-col sm:flex-row justify-between w-full  font-poppins font-light mt-8 ">
+            <div className="aeroText w-[88%  text-[16.5px] text-justify flex flex-col sm:flex-row justify-between w-full  font-poppins font-light mt-8 ">
               {coldState === "hot-inverted" ? (
                 <>
                   <ul className="list-disc sm:w-[48%] pl-6">

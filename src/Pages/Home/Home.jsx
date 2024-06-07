@@ -444,7 +444,7 @@ const Home = () => {
       y: 30,
       opacity: 0,
       stagger: 0.05 ,
-      delay: 0.4,
+      delay: 0.6,
       duration: 0.2
     })
   })

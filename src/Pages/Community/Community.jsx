@@ -1,3 +1,10 @@
+import { useState } from "react";
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react";
+import scrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(scrollTrigger)
+
 import heroBg from "../../assets/images/community/heroBg.png";
 import logo from "../../assets/images/community/logo.png";
 import dummy1 from "../../assets/images/home/dummy1.png";
@@ -20,16 +27,234 @@ import instagram from "../../assets/images/icons/instagram.png";
 import alert from "../../assets/images/icons/alert.png";
 
 const Community = () => {
+
+  useGSAP(() =>{
+    gsap.from(".main-screen", {
+      scrollTrigger: ".main-screen",
+      ease: true,
+      opacity: 0,
+      delay: 0,
+      duration: 1
+    })
+    gsap.from(".homeText1", {
+      scrollTrigger: ".homeText1",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.4
+    })
+    gsap.from(".homeText2", {
+      scrollTrigger: ".homeText1",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.6
+    })
+    // gsap.from(".homeText3", {
+    //   scrollTrigger: ".homeText1",
+    //   y: 50,
+    //   ease: "circ",
+    //   opacity: 0,
+    //   delay: 0.8
+    // })
+    // gsap.from(".orderButton", {
+    //   y: 30,
+    //   autoAlpha: 0,
+    //   delay: 1,
+    //   duration: 0.5
+    // })
+
+    gsap.from(".summaryheading", {
+      scrollTrigger: ".summaryheading",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.8
+    })
+    gsap.from(".summaryLine", {
+      scrollTrigger: {
+        trigger: ".summaryheading",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.8,
+      duration: 0.6
+    })
+    gsap.from(".summaryText", {
+      scrollTrigger: {
+        trigger: ".summaryheading",
+        start: "top 75%", 
+      },
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 1
+    })
+    gsap.from(".igText1", {
+      scrollTrigger: {
+        trigger: ".igText1",
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.05 ,
+      delay: 0.2,
+      duration: 0.2
+    })
+    gsap.from(".igText2", {
+      scrollTrigger: {
+        trigger: ".igText2",
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.05 ,
+      delay: 0.3,
+      duration: 0.2
+    })
+    gsap.from(".igText3", {
+      scrollTrigger: {
+        trigger: ".igText3",
+        start: "top 75%",
+      },
+      y: 30,
+      opacity: 0,
+      stagger: 0.05 ,
+      delay: 0.4,
+      duration: 0.2
+    })
+    gsap.from(".igLine", {
+      scrollTrigger: {
+        trigger: ".summaryheading",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0.8,
+      duration: 0.6
+    })
+    gsap.from(".ig1", {
+      scrollTrigger: {
+        trigger: ".ig1",
+        start: "top 75%", 
+      },
+      x: -50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.2,
+      duration: 0.3
+    }) 
+    gsap.from(".ig2", {
+      scrollTrigger: {
+        trigger: ".ig1",
+        start: "top 75%", 
+      },
+      y: 50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.4,
+      duration: 0.3
+    })
+    gsap.from(".ig3", {
+      scrollTrigger: {
+        trigger: ".ig1",
+        start: "top 75%", 
+      },
+      y: 50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.6,
+      duration: 0.3
+    }) 
+    gsap.from(".ig4", {
+      scrollTrigger: {
+        trigger: ".ig1",
+        start: "top 75%", 
+      },
+      x: 50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.8,
+      duration: 0.3
+    })
+
+    gsap.from(".brewingText1", {
+      scrollTrigger: ".brewingText1",
+      y: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.4
+    })
+    gsap.from(".brewingLine", {
+      scrollTrigger: {
+        trigger: ".brewingLine",
+        start: "top 75%", 
+      },
+      ease: true,
+      width: 0,
+      opacity: 0,
+      delay: 0,
+      duration: 0.6
+    })
+    gsap.from(".brew1", {
+      scrollTrigger: {
+        trigger: ".brew1",
+        start: "top 75%", 
+      },
+      x: -50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.2,
+      duration: 0.3
+    }) 
+    gsap.from(".brew2", {
+      scrollTrigger: {
+        trigger: ".brew1",
+        start: "top 75%", 
+      },
+      x: 50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.2,
+      duration: 0.3
+    })
+    gsap.from(".brew3", {
+      scrollTrigger: {
+        trigger: ".brew1",
+        start: "top 75%", 
+      },
+      x: -50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.4,
+      duration: 0.3
+    }) 
+    gsap.from(".brew4", {
+      scrollTrigger: {
+        trigger: ".brew1",
+        start: "top 75%", 
+      },
+      x: 50,
+      opacity: 0,
+      ease: "circ",
+      delay: 0.4,
+      duration: 0.3
+    })
+  })
+
   return (
-    <div className="font-poppins">
+    <div className="main-screen font-poppins">
       <div
-        className="flex flex-col items-center pt-8 sm:pt-0 justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-center text-white text-center"
+        className=" flex flex-col items-center pt-8 sm:pt-0 justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-center text-white text-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="text-[49.44px] sm:text-[74.16px] font-anton">
+        <div className="homeText1 text-[49.44px] sm:text-[74.16px] font-anton">
           COFFEE CULTURE COLLECTIVE
         </div>
-        <div className="text-[18.88px] sm:text-[23.6px] w-[90%] md:w-[70%] mt-4 font-base">
+        <div className="homeText2 text-[18.88px] sm:text-[23.6px] w-[90%] md:w-[70%] mt-4 font-base">
           Unlock the essence of coffee: Explore its origins, master espresso,
           pour perfection with V60 and Aeropress, chill with cold brew, and
           savor the simplicity of French press.
@@ -38,11 +263,11 @@ const Community = () => {
 
       <div className="flex flex-col sm:flex-row justify-between items-center sm:w-[80%] mx-auto mt-12">
         <div className="w-[90%] sm:w-[58%] text-white">
-          <div className="sm:w-[58%] font-anton leading-tight text-[45.83px] ">
+          <div className="summaryheading sm:w-[58%] font-anton leading-tight text-[45.83px] ">
             WE'RE MORE THAN JUST A PLACE TO GRAB A CUP OF COFFEE
           </div>
-          <div className="w-[42%] sm:w-[32%] h-[2px] bg-white mt-4" />
-          <div className="text-[17.5px] text-justify font-light sm:leading-loose mt-8 ">
+          <div className="summaryLine w-[42%] sm:w-[32%] h-[2px] bg-white mt-4" />
+          <div className="summaryText text-[17.5px] text-justify font-light sm:leading-loose mt-8 ">
             We're a community of coffee enthusiasts, neighbors, and friends who
             gather to connect, share experiences, and celebrate our love for all
             things coffee. Whether you're a seasoned coffee aficionado or just
@@ -57,16 +282,16 @@ const Community = () => {
 
       <div className="flex flex-col justify-center items-center w-[90%] sm:w-[85%] mx-auto py-24 pb-20 text-white">
         <div className="text-center w-[90% sm:w-[70%]">
-          <div className="font-anton leading-tight text-[30.55px sm: text-[45.83px]">
+          <div className="igText1 font-anton leading-tight text-[30.55px sm: text-[45.83px]">
             FOLLOW US ON SOCIAL MEDIA
           </div>
-          <div className="sm:hidden mx-auto w-[90%] h-[2px] bg-white mt-4" />
-          <div className="text-[16.5px] text-center font-light leading-loose mt-4">
+          <div className="igLine sm:hidden mx-auto w-[90%] h-[2px] bg-white mt-4" />
+          <div className="igText2 text-[16.5px] text-center font-light leading-loose mt-4">
             Join the conversation and get a glimpse into our daily life! Share
             your photos using our hashtag #coffeetherapyinc Community and see
             yourself featured on our page.
           </div>
-          <div className="flex justify-center items-center gap-1 text-xl mt-4">
+          <div className="igText3 flex justify-center items-center gap-1 text-xl mt-4">
             <img src={instagram} className="mt-1" />
             <div className="text-xl">@coffeetherapyinc</div>
           </div>
@@ -74,19 +299,19 @@ const Community = () => {
         <div className="mt-12 flex w-full md:gap-8 justify-center">
           <img
             src={dummy1}
-            className="size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+            className="ig1 size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
           />
           <img
             src={dummy2}
-            className="size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+            className="ig2 size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
           />
           <img
             src={dummy3}
-            className="hidden min-[900px]:block size-[250px] hover:drop-shadow-xl transition-all"
+            className="ig3 hidden min-[900px]:block size-[250px] hover:drop-shadow-xl transition-all"
           />
           <img
             src={dummy4}
-            className="hidden xl:block size-[250px] hover:drop-shadow-xl transition-all"
+            className="ig4 hidden xl:block size-[250px] hover:drop-shadow-xl transition-all"
           />
         </div>
       </div>
@@ -96,13 +321,13 @@ const Community = () => {
         style={{ backgroundImage: `url(${brewBg})` }}
       >
         <div className="w-[80%] flex flex-col items-center sm:items-end">
-          <div className="w-[58%] font-anton text-center sm:text-right leading-tight text-[45.83px] ">
+          <div className="brewingText1 w-[58%] font-anton text-center sm:text-right leading-tight text-[45.83px] ">
             BREWING BONANZA
           </div>
-          <div className="w-[170px] h-[2px] bg-white mt-4" />
+          <div className="brewingLine w-[170px] h-[2px] bg-white mt-4" />
         </div>
         <div className="w-[80%] sm:w-[80%] flex flex-col sm:flex-row justify-center gap-8 mt-12">
-          <div className="flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
+          <div className="brew1 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
             <img src={brew1} className="sm:w-[40%] h-[280px] w-full" />
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
               <img src={icon1} className="size-20 sm:size-16" />
@@ -116,7 +341,7 @@ const Community = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
+          <div className="brew2 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
             <img src={brew2} className="sm:w-[40%] h-[280px] w-full" />
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
               <img src={icon2} className="size-20 sm:size-16" />
@@ -131,7 +356,7 @@ const Community = () => {
         </div>
 
         <div className="w-[80%] sm:w-[80%] flex flex-col sm:flex-row justify-center gap-8 mt-8">
-          <div className="flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
+          <div className="brew3 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
             <img src={brew3} className="sm:w-[40%] h-[280px] w-full" />
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
               <img src={icon3} className="size-20 sm:size-16" />
@@ -144,7 +369,7 @@ const Community = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
+          <div className="brew4 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
             <img src={brew4} className="sm:w-[40%] h-[280px] w-full" />
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
               <img src={icon4} className="size-20 sm:size-16" />
