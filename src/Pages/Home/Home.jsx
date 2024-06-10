@@ -11,23 +11,23 @@ import "slick-carousel/slick/slick-theme.css";
 
 import homeBg from "../../assets/images/backgrounds/homeBg.png";
 import logo from "../../assets/images/ctLogo.png";
-import ourStory from "../../assets/images/home/ourStory.png";
-import bestsellersCover from "../../assets/images/home/bestsellersCover.png";
-import best1 from "../../assets/images/home/best1.png";
-import best2 from "../../assets/images/home/best2.png";
+import ourStory from "../../assets/images/home/ourStory.webp";
+import bestsellersCover from "../../assets/images/home/bestsellersCover.webp";
+import best1 from "../../assets/images/home/best1.webp";
+import best2 from "../../assets/images/home/best2.webp";
 import communityBg from "../../assets/images/home/communityBg.png";
 import quote from "../../assets/images/home/quote.png";
 import rev1 from "../../assets/images/home/rev1.png";
 import rev2 from "../../assets/images/home/rev2.png";
 import rev3 from "../../assets/images/home/rev3.png";
-import dummy1 from "../../assets/images/home/dummy1.png";
-import dummy2 from "../../assets/images/home/dummy2.png";
-import dummy3 from "../../assets/images/home/dummy3.png";
-import dummy4 from "../../assets/images/home/dummy4.png";
+import dummy1 from "../../assets/images/home/dummy1.jpeg";
+import dummy2 from "../../assets/images/home/dummy2.jpeg";
+import dummy3 from "../../assets/images/home/dummy3.jpeg";
+import dummy4 from "../../assets/images/home/dummy4.jpeg";
 import contactBg from "../../assets/images/home/contactBg.png";
-import brew1 from "../../assets/images/home/brew1.png";
-import brew2 from "../../assets/images/home/brew2.png";
-import brew3 from "../../assets/images/home/brew3.png";
+import brew1 from "../../assets/images/home/brew1.webp";
+import brew2 from "../../assets/images/home/brew2.webp";
+import brew3 from "../../assets/images/home/brew3.webp";
 import brewBg from "../../assets/images/home/brewBg.png";
 
 import icon2 from "../../assets/images/community/icon1.png";
@@ -38,9 +38,11 @@ import instagram from "../../assets/images/icons/instagram.png";
 import alert from "../../assets/images/icons/alert.png";
 
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-  
+  const navigate = useNavigate();
+
   var settings = {
     dots: true,
     arrows: false,
@@ -788,28 +790,36 @@ const Home = () => {
               #<span className="text-[#568759]">coffee</span>therapyinc
             </div>
             <div className="igText2 text-5xl font-anton mt-3">CONNECT ON INSTAGRAM</div>
-            <div className="igText3 flex justify-center items-center gap-1 text-xl mt-3">
+            <a href="https://www.instagram.com/coffeetherapyinc?igsh=NWhkdmpsa244c2l1" className="igText3 group flex w-fit mx-auto justify-center items-center gap-1 text-xl mt-3">
               <img src={instagram} className="mt-1" />
-              <div className="text-xl">@coffeetherapyinc</div>
-            </div>
+              <div className="text-xl group-hover:underline underline-offset-4">@coffeetherapyinc</div>
+            </a>
           </div>
           <div className="mt-12 flex w-full md:gap-8 justify-center">
-            <img
-              src={dummy1}
-              className="ig1 size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
-            />
-            <img
-              src={dummy2}
-              className="ig2 size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
-            />
-            <img
-              src={dummy3}
-              className="ig3 hidden min-[900px]:block size-[250px] hover:drop-shadow-xl transition-all"
-            />
-            <img
-              src={dummy4}
-              className="ig4 hidden xl:block size-[250px] hover:drop-shadow-xl transition-all"
-            />
+            <a href="https://www.instagram.com/p/CrC5oD-Jy0f/?igsh=c2ZkZzExMG5hbmw0&img_index=1">
+              <img
+                src={dummy1}
+                className="ig1 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+              />
+            </a>
+            <a href="https://www.instagram.com/p/C4gA6CGvoIj/?igsh=andnY3IwdGI0cDBt">
+              <img
+                src={dummy2}
+                className="ig2 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+              />
+            </a>
+            <a href="https://www.instagram.com/p/C7desYoP9yO/?igsh=c2x1cm5pYmsyNHIz">
+              <img
+                src={dummy3}
+                className="ig3 border hidden min-[900px]:block size-[250px] hover:drop-shadow-xl transition-all"
+              />
+            </a>
+            <a href="https://www.instagram.com/p/C7YbuB3Pp0D/?igsh=aW5ucHgwZWNhbm5q">
+              <img
+                src={dummy4}
+                className="ig4 border hidden xl:block size-[250px] hover:drop-shadow-xl transition-all"
+              />
+            </a>
           </div>
         </div>
 
@@ -820,19 +830,17 @@ const Home = () => {
           <div className="contact1 font-anton text-5xl text-center">
             REACH OUT, LET'S CONNECT
           </div>
-          <div className="contact2 flex gap-4 items-center bg-white py-[6px] px-2 mt-4 w-[80%] sm:w-[30%]">
+          {/* <div className="contact2 flex gap-4 items-center bg-white py-[6px] px-2 mt-4 w-[80%] sm:w-[30%]">
             <img src={alert} className="size-3" />
             <input
               className="w-full bg-transparent outline-none placeholder:text-[#9D8781] text-[#9D8781]"
               placeholder="Your Email Address"
             />
-          </div>
-          {/* <button className="contact3 px-8 py-[6px] bg-transparent border-2 mt-4">
-            Submit
-          </button> */}
-          <button class="contact3 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
+          </div> */}
+          
+          <button onClick={()=>navigate("/contact")} class="contact3 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
             <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
-            <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">Submit</span>
+            <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">Contact</span>
           </button>
         </div>
       </div>

@@ -1,16 +1,16 @@
 import { useState } from "react";
-import gsap from "gsap"
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(scrollTrigger)
+gsap.registerPlugin(scrollTrigger);
 
 import heroBg from "../../assets/images/community/heroBg.png";
 import logo from "../../assets/images/community/logo.png";
-import dummy1 from "../../assets/images/home/dummy1.png";
-import dummy2 from "../../assets/images/home/dummy2.png";
-import dummy3 from "../../assets/images/home/dummy3.png";
-import dummy4 from "../../assets/images/home/dummy4.png";
+import dummy1 from "../../assets/images/home/dummy1.jpeg";
+import dummy2 from "../../assets/images/home/dummy2.jpeg";
+import dummy3 from "../../assets/images/home/dummy3.jpeg";
+import dummy4 from "../../assets/images/home/dummy4.jpeg";
 import brew1 from "../../assets/images/community/brew1.png";
 import brew2 from "../../assets/images/community/brew2.png";
 import brew3 from "../../assets/images/community/brew3.png";
@@ -24,32 +24,33 @@ import brewBg from "../../assets/images/community/brewBg.png";
 import contactBg from "../../assets/images/home/contactBg.png";
 
 import instagram from "../../assets/images/icons/instagram.png";
-import alert from "../../assets/images/icons/alert.png";
+import { useNavigate } from "react-router-dom";
 
 const Community = () => {
+  const navigate = useNavigate();
 
-  useGSAP(() =>{
+  useGSAP(() => {
     gsap.from(".main-screen", {
       scrollTrigger: ".main-screen",
       ease: true,
       opacity: 0,
       delay: 0,
-      duration: 1
-    })
+      duration: 1,
+    });
     gsap.from(".homeText1", {
       scrollTrigger: ".homeText1",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.4
-    })
+      delay: 0.4,
+    });
     gsap.from(".homeText2", {
       scrollTrigger: ".homeText1",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.6
-    })
+      delay: 0.6,
+    });
     // gsap.from(".homeText3", {
     //   scrollTrigger: ".homeText1",
     //   y: 50,
@@ -69,29 +70,29 @@ const Community = () => {
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.8
-    })
+      delay: 0.8,
+    });
     gsap.from(".summaryLine", {
       scrollTrigger: {
         trigger: ".summaryheading",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.8,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".summaryText", {
       scrollTrigger: {
         trigger: ".summaryheading",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 1
-    })
+      delay: 1,
+    });
     gsap.from(".igText1", {
       scrollTrigger: {
         trigger: ".igText1",
@@ -99,10 +100,10 @@ const Community = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.2,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".igText2", {
       scrollTrigger: {
         trigger: ".igText2",
@@ -110,10 +111,10 @@ const Community = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.3,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".igText3", {
       scrollTrigger: {
         trigger: ".igText3",
@@ -121,134 +122,134 @@ const Community = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.4,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".igLine", {
       scrollTrigger: {
         trigger: ".summaryheading",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.8,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".ig1", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: -50,
       opacity: 0,
       ease: "circ",
       delay: 0.2,
-      duration: 0.3
-    }) 
+      duration: 0.3,
+    });
     gsap.from(".ig2", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.4,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".ig3", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.6,
-      duration: 0.3
-    }) 
+      duration: 0.3,
+    });
     gsap.from(".ig4", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.8,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
 
     gsap.from(".brewingText1", {
       scrollTrigger: ".brewingText1",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.4
-    })
+      delay: 0.4,
+    });
     gsap.from(".brewingLine", {
       scrollTrigger: {
         trigger: ".brewingLine",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".brew1", {
       scrollTrigger: {
         trigger: ".brew1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: -50,
       opacity: 0,
       ease: "circ",
       delay: 0.2,
-      duration: 0.3
-    }) 
+      duration: 0.3,
+    });
     gsap.from(".brew2", {
       scrollTrigger: {
         trigger: ".brew1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.2,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".brew3", {
       scrollTrigger: {
         trigger: ".brew1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: -50,
       opacity: 0,
       ease: "circ",
       delay: 0.4,
-      duration: 0.3
-    }) 
+      duration: 0.3,
+    });
     gsap.from(".brew4", {
       scrollTrigger: {
         trigger: ".brew1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.4,
-      duration: 0.3
-    })
-  })
+      duration: 0.3,
+    });
+  });
 
   return (
     <div className="main-screen font-poppins">
       <div
-        className=" flex flex-col items-center pt-8 sm:pt-0 justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-center text-white text-center"
+        className=" flex flex-col items-center pt-8 sm:pt-0 justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-bottom text-white text-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="homeText1 text-[49.44px] sm:text-[74.16px] font-anton">
@@ -291,28 +292,41 @@ const Community = () => {
             your photos using our hashtag #coffeetherapyinc Community and see
             yourself featured on our page.
           </div>
-          <div className="igText3 flex justify-center items-center gap-1 text-xl mt-4">
+          <a
+            href="https://www.instagram.com/coffeetherapyinc?igsh=NWhkdmpsa244c2l1"
+            className="igText3 group flex w-fit mx-auto justify-center items-center gap-1 text-xl mt-3"
+          >
             <img src={instagram} className="mt-1" />
-            <div className="text-xl">@coffeetherapyinc</div>
-          </div>
+            <div className="text-xl group-hover:underline underline-offset-4">
+              @coffeetherapyinc
+            </div>
+          </a>
         </div>
         <div className="mt-12 flex w-full md:gap-8 justify-center">
-          <img
-            src={dummy1}
-            className="ig1 size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
-          />
-          <img
-            src={dummy2}
-            className="ig2 size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
-          />
-          <img
-            src={dummy3}
-            className="ig3 hidden min-[900px]:block size-[250px] hover:drop-shadow-xl transition-all"
-          />
-          <img
-            src={dummy4}
-            className="ig4 hidden xl:block size-[250px] hover:drop-shadow-xl transition-all"
-          />
+          <a href="https://www.instagram.com/p/CrC5oD-Jy0f/?igsh=c2ZkZzExMG5hbmw0&img_index=1">
+            <img
+              src={dummy1}
+              className="ig1 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+            />
+          </a>
+          <a href="https://www.instagram.com/p/C4gA6CGvoIj/?igsh=andnY3IwdGI0cDBt">
+            <img
+              src={dummy2}
+              className="ig2 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+            />
+          </a>
+          <a href="https://www.instagram.com/p/C7desYoP9yO/?igsh=c2x1cm5pYmsyNHIz">
+            <img
+              src={dummy3}
+              className="ig3 border hidden min-[900px]:block size-[250px] hover:drop-shadow-xl transition-all"
+            />
+          </a>
+          <a href="https://www.instagram.com/p/C7YbuB3Pp0D/?igsh=aW5ucHgwZWNhbm5q">
+            <img
+              src={dummy4}
+              className="ig4 border hidden xl:block size-[250px] hover:drop-shadow-xl transition-all"
+            />
+          </a>
         </div>
       </div>
 
@@ -388,29 +402,26 @@ const Community = () => {
         className="py-16 bg-center bg-cover text-white"
         style={{ backgroundImage: `url(${contactBg})` }}
       >
-        <div className="w-[90%] sm:w-[80%] mx-auto flex flex-col sm:flex-row justify-between gap-4 items-center ">
-          <div className="w-[90%] sm:w-[60%] text-center sm:text-left">
+        <div className="w-[90%] sm:w-[80%] mx-auto flex flex-col sm:flex-row justify-center gap-4 items-center ">
+          <div className="w-[90%] sm:w-[60%] text-center sm:text- left">
             <div className="font-anton text-[40.83px]">
               We'd love to hear from you!
             </div>
-            <div className="w-[90%] sm:w-[70%] mx-auto sm:mx-0">
+            <div className="w-[90%] sm:w-[70%] mx-auto sm:mx- 0">
               Share your coffee stories, suggestions, or questions with us.
               We're always happy to connect with our community.
             </div>
-            <div className="w-[90%] sm:w-[70%] mt-4 mx-auto sm:mx-0">
+            <div className="w-[90%] sm:w-full [70%] mt-4 mx-auto sm:mx-0">
               #coffeetherapyinc
             </div>
-          </div>
-          <div className="flex flex-col items-center w-[90%] sm:w-[35%] max-w-[550px]">
-            <div className="flex gap-4 items-center bg-white py-[6px] px-2 mt-4 w-[30% w-full">
-              <img src={alert} className="size-3" />
-              <input
-                className="w-full bg-transparent outline-none placeholder:text-[#9D8781] text-[#9D8781]"
-                placeholder="Your Email Address"
-              />
-            </div>
-            <button className="px-8 py-[6px] bg-transparent border-2 mt-4">
-              Submit
+            <button
+              onClick={() => navigate("/contact")}
+              class="contact3 group relative m-1 mt-4 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]"
+            >
+              <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
+              <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
+                Contact
+              </span>
             </button>
           </div>
         </div>

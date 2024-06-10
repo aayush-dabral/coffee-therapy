@@ -6,10 +6,10 @@ import scrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(scrollTrigger)
 
 import heroBg from "../../assets/images/learn/heroBg.png";
-import espressoBg from "../../assets/images/learn/espressoBg.png";
-import v60 from "../../assets/images/learn/v60.png";
-import french from "../../assets/images/learn/french.png";
-import coldBrew from "../../assets/images/learn/coldBrew.png";
+import espressoBg from "../../assets/images/home/contactBg.png";
+import v60 from "../../assets/images/learn/v60.webp";
+import french from "../../assets/images/learn/french.webp";
+import coldBrew from "../../assets/images/learn/coldBrew.webp";
 import aeropressBg from "../../assets/images/learn/aeropressBg.png";
 
 const Learn = () => {

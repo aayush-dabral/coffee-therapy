@@ -6,7 +6,7 @@ import scrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(scrollTrigger)
 
 import heroBg from "../../assets/images/products/heroBg.png";
-import downloadBg from "../../assets/images/products/downloadBg.png";
+import downloadBg from "../../assets/images/home/contactBg.png";
 import qr from "../../assets/images/products/qr.png";
 
 import zomato from "../../assets/images/icons/zomato.png";
@@ -118,10 +118,12 @@ const Products = () => {
             <div className="homeText2 leading-none ">COFFEE. IT’S AN</div>
             <div className="homeText3 leading-none ">EXPERIENCE.</div>
           </div>
-          <button className="orderButton mt-8 px-6 py-1 flex items-center gap-2 text-[18px border-2 border-white">
-            Order from
-            <img src={zomato} className="w-16 mb-[2px]" />
-          </button>
+          <a href="https://zomato.onelink.me/xqzv/6h4cjb3z">
+            <button className="orderButton mt-8 px-6 py-1 flex items-center gap-2 text-[18px border-2 border-white">
+              Order from
+              <img src={zomato} className="w-16 mb-[2px]" />
+            </button>
+          </a>
         </div>
       </div>
 
@@ -403,10 +405,16 @@ const Products = () => {
                 </>
               )}
             </div>
-            <button className="menuButton px-6 py-1 flex items-center gap-2 text-xs sm:text-base border-2 border-white">
+            {/* <button className="menuButton px-6 py-1 flex items-center gap-2 text-xs sm:text-base border-2 border-white">
               Order from
               <img src={zomato} className="w-16 mb-[2px]" />
-            </button>
+            </button> */}
+            <a href="https://zomato.onelink.me/xqzv/6h4cjb3z">
+              <button className="menuButton px-6 py-1 flex items-center gap-2 text-xs sm:text-base border-2 border-white">
+                Order from
+                <img src={zomato} className="w-16 mb-[2px]" />
+              </button>
+            </a>
           </div>
         </div>
       </div>

@@ -9,6 +9,9 @@ import heroBg from "../../assets/images/contact/heroBg.png";
 import instagram from "../../assets/images/icons/instagram.png";
 
 const Contact = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
   useGSAP(() => {
     gsap.from(".main-screen", {
       scrollTrigger: ".main-screen",
@@ -255,9 +258,10 @@ const Contact = () => {
               />
             </div>
 
-            <div className="flex justify-center">
-              <button className="px-8 py-[6px] bg-transparent border mt-8">
-                Submit
+            <div className="flex justify-center mt-8">
+              <button onClick={()=>navigate("/contact")} class="contact3 group relative m-1 cursor-pointer overflow-hidden  border  border-white px-8 py-[6px]">
+                <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
+                <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">Submit</span>
               </button>
             </div>
           </div>
@@ -402,9 +406,13 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex justify-center">
-              <button className="px-8 py-[6px] bg-transparent border mt-8">
+            <div className="flex justify-center mt-8">
+              {/* <button className="px-8 py-[6px] bg-transparent border mt-8">
                 Submit
+              </button> */}
+              <button onClick={()=>navigate("/contact")} class="contact3 group relative m-1 cursor-pointer overflow-hidden  border  border-white px-8 py-[6px]">
+                <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
+                <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">Submit</span>
               </button>
             </div>
           </div>
