@@ -397,15 +397,14 @@ const Learn = () => {
                   <div className="no-underline">v</div>
                 </div>
               )}
-              {/* <span className="no-underline">v</span> */}
             </div>
           </div>
         </div>
       </div>
 
       <div
-        className="mt-12 bg-cover bg-center py-20"
-        style={{ backgroundImage: `url(${espressoBg})` }}
+        className="mt-12 bg-cover bg-top py-20"
+        style={{ backgroundImage: `url(${espressoBg})`}}
       >
         <div className="flex justify-between items-center w-[90%] sm:w-[80%] mx-auto">
           <div className="text-white">
@@ -422,6 +421,57 @@ const Learn = () => {
               allure lies in its ability to deliver a potent kick of caffeine,
               awakening the senses and invigorating the soul with each decadent
               sip.
+            </div>
+            <div
+                className={`transition-all ease-in-out duration-300 overflow-hidden mt-4 ${
+                  espressoView ? "max-h-[400px]" : "max-h-0"
+                } `}
+              >
+                Key things to keep in mind while pulling an espresso shot is:
+                <ul className="list-disc pl-4 mt-2">
+                  <li>
+                    Processed green beans are frozen and sent to the rosters.{" "}
+                  </li>
+                  <li className="mt-4">
+                    These green beans are then roasted to different profiles
+                    like light, medium & dark to get desired flavor profile.{" "}
+                  </li>
+                  <li className="mt-4">
+                    These roasted beans are then allowed to degas for few days.{" "}
+                  </li>
+                  <li className="mt-4">
+                    Processed green beans are frozen and sent to the rosters.{" "}
+                  </li>
+                </ul>
+                <br/>
+                Keep in mind these parameters to find a best recipe that works for you and then keep 
+                consistently making same beautiful and rich espresso every time.
+                <br/>
+                These espresso shots are used to make most of our day-to-day coffees like cappuccino, latte, 
+                americano, flat white and a whole lot more.
+              </div>
+            <div className="summaryText sm:hid den mt-8 text-center text-[20.5px] leading-[2.3]">
+              {!espressoView ? (
+                <div className="flex justify-center gap-2 w-full ">
+                  <div
+                    onClick={() => setEspressoView(true)}
+                    className=" underline underline-offset-4 "
+                  >
+                    Read More
+                  </div>
+                  <div className="no-underline">v</div>
+                </div>
+              ) : (
+                <div className="flex justify-center gap-2 w-full ">
+                  <div
+                    onClick={() => setEspressoView(false)}
+                    className=" underline underline-offset-4 "
+                  >
+                    Read Less
+                  </div>
+                  <div className="no-underline">v</div>
+                </div>
+              )}
             </div>
           </div>
         </div>

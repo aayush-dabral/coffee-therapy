@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
@@ -9,9 +9,11 @@ import heroBg from "../../assets/images/contact/heroBg.png";
 import instagram from "../../assets/images/icons/instagram.png";
 
 const Contact = () => {
+
   useEffect(()=>{
     window.scrollTo(0,0);
   },[])
+
   useGSAP(() => {
     gsap.from(".main-screen", {
       scrollTrigger: ".main-screen",

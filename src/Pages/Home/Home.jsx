@@ -1,13 +1,16 @@
-import { useRef } from "react";
-import gsap from "gsap"
+import { useRef, useState } from "react";
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(scrollTrigger)
+gsap.registerPlugin(scrollTrigger);
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { Tooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 import homeBg from "../../assets/images/backgrounds/homeBg.png";
 import logo from "../../assets/images/ctLogo.png";
@@ -42,6 +45,8 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [toolHead, setToolHead] = useState("CLASSIC COLD BREW")
+  const [toolDescription, setToolDescription] = useState("Smooth, bold, and refreshingly chilled, our cold brew is a harmonious blend of rich flavors brewed for 18 hours to perfection.")
 
   var settings = {
     dots: true,
@@ -56,81 +61,98 @@ const Home = () => {
     // autoplaySpeed: 2000,
   };
 
-  const homeText1 = useRef(null)
+  const homeText1 = useRef(null);
 
-  useGSAP(() =>{
+  const changeTooltip = (item) => {
+    switch(item){
+      case "classic":
+        setToolHead("CLASSIC COLD BREW")
+        setToolDescription("Smooth, bold, and refreshingly chilled, our cold brew is a harmonious blend of rich flavors brewed for 18 hours to perfection.")
+        break;
+      case "cappuccino":
+        setToolHead("CAPPUCCINO")
+        setToolDescription("A velvety blend of espresso, steamed milk, and frothy foam, creating a perfect harmony of bold flavor and creamy texture.")
+        break;
+      case "latte":
+        setToolHead("CAFE LATTE")
+        setToolDescription("A creamy and smooth espresso-based beverage, perfectly balanced with steamed milk, delivering a rich aroma and a satisfying caffeine kick.")
+        break;
+    }
+  }
+
+  useGSAP(() => {
     gsap.from(".main-screen", {
       scrollTrigger: ".main-screen",
       ease: true,
       opacity: 0,
       delay: 0,
-      duration: 1
-    })
+      duration: 1,
+    });
     gsap.from(".homeText", {
       scrollTrigger: ".homeText",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.4
-    })
-    gsap.from(homeText1.current , {
+      delay: 0.4,
+    });
+    gsap.from(homeText1.current, {
       scrollTrigger: ".homeText",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.7
-    })
+      delay: 0.7,
+    });
     gsap.from(".exploreButton", {
       y: 30,
       autoAlpha: 0,
       delay: 1,
-      duration: 0.5
-    })
-    
+      duration: 0.5,
+    });
+
     gsap.from(".storyHeading", {
       scrollTrigger: {
         trigger: ".storyHeading",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       y: 50,
       opacity: 0,
       delay: 0,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".storyLine", {
       scrollTrigger: {
         trigger: ".storyLine",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".storyText", {
       scrollTrigger: {
         trigger: ".storyText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.4
-    })
+      delay: 0.4,
+    });
 
     gsap.from(".bestsellerText", {
       scrollTrigger: {
         trigger: ".bestsellerText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       y: 50,
       opacity: 0,
       delay: 0,
-      duration: 0.5
-    }) 
+      duration: 0.5,
+    });
     gsap.from(".best1", {
       scrollTrigger: {
         trigger: ".best1",
@@ -140,8 +162,8 @@ const Home = () => {
       y: 50,
       opacity: 0,
       delay: 0.3,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
     gsap.from(".best2", {
       scrollTrigger: {
         trigger: ".best2",
@@ -151,8 +173,8 @@ const Home = () => {
       y: 50,
       opacity: 0,
       delay: 0.5,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
     gsap.from(".bestButton", {
       scrollTrigger: {
         trigger: ".bestButton",
@@ -160,65 +182,65 @@ const Home = () => {
       },
       y: 30,
       autoAlpha: 0,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
 
     gsap.from(".brewText", {
       scrollTrigger: {
         trigger: ".brewText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       y: 50,
       opacity: 0,
       delay: 0,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".brewLine", {
       scrollTrigger: {
         trigger: ".brewLine",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
 
     gsap.from(".brew1", {
       scrollTrigger: {
         trigger: ".brew1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       x: -50,
       opacity: 0,
       delay: 0.2,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".brew2", {
       scrollTrigger: {
         trigger: ".brew2",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       y: 50,
       opacity: 0,
       delay: 0.5,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".brew3", {
       scrollTrigger: {
         trigger: ".brew3",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       x: 50,
       opacity: 0,
       delay: 0.8,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
 
     gsap.from(".brewButton", {
       scrollTrigger: {
@@ -228,8 +250,8 @@ const Home = () => {
       y: 30,
       autoAlpha: 0,
       delay: 0,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
 
     gsap.from(".communityHeading", {
       scrollTrigger: {
@@ -238,20 +260,20 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.2,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".communityText", {
       scrollTrigger: {
         trigger: ".communityText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
       delay: 0.2,
-    })
+    });
     gsap.from(".communityButton", {
       scrollTrigger: {
         trigger: ".communityButton",
@@ -260,8 +282,8 @@ const Home = () => {
       y: 30,
       autoAlpha: 0,
       delay: 0.4,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
 
     gsap.from(".testHeading", {
       scrollTrigger: {
@@ -270,73 +292,73 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.2,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".test1", {
       scrollTrigger: {
         trigger: ".test1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       x: -50,
       opacity: 0,
       delay: 0.2,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".test11", {
       scrollTrigger: {
         trigger: ".test1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
       delay: 0.7,
-    })
+    });
     gsap.from(".test2", {
       scrollTrigger: {
         trigger: ".test2",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       y: 50,
       opacity: 0,
       delay: 0.5,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".test22", {
       scrollTrigger: {
         trigger: ".test1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
       delay: 1,
-    })
+    });
     gsap.from(".test3", {
       scrollTrigger: {
         trigger: ".test3",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       x: 50,
       opacity: 0,
       delay: 0.8,
-      duration: 0.6
-    })
+      duration: 0.6,
+    });
     gsap.from(".test33", {
       scrollTrigger: {
         trigger: ".test1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
       delay: 1.3,
-    })
+    });
 
     gsap.from(".igText1", {
       scrollTrigger: {
@@ -345,10 +367,10 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.2,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".igText2", {
       scrollTrigger: {
         trigger: ".igText2",
@@ -356,10 +378,10 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.3,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".igText3", {
       scrollTrigger: {
         trigger: ".igText3",
@@ -367,54 +389,54 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.4,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".ig1", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: -50,
       opacity: 0,
       ease: "circ",
       delay: 0.2,
-      duration: 0.3
-    }) 
+      duration: 0.3,
+    });
     gsap.from(".ig2", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.4,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".ig3", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.6,
-      duration: 0.3
-    }) 
+      duration: 0.3,
+    });
     gsap.from(".ig4", {
       scrollTrigger: {
         trigger: ".ig1",
-        start: "top 75%", 
+        start: "top 75%",
       },
       x: 50,
       opacity: 0,
       ease: "circ",
       delay: 0.8,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
 
     gsap.from(".contact1", {
       scrollTrigger: {
@@ -423,10 +445,10 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.2,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".contact2", {
       scrollTrigger: {
         trigger: ".contact2",
@@ -434,10 +456,10 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.3,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".contact3", {
       scrollTrigger: {
         trigger: ".contact3",
@@ -445,15 +467,29 @@ const Home = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.6,
-      duration: 0.2
-    })
-  })
+      duration: 0.2,
+    });
+  });
 
   return (
     <div className="smooth-wrapper">
       <div className="smooth-content main-screen font-poppins text-white">
+        <Tooltip 
+          id="my-tooltip" 
+          className="absolute z-40 bg-white bg-opacity-40 text-black"
+          style={{
+            "width": "300px",
+            "backgroundColor": "white",
+            "color": "#2A1E18",
+            "borderRadius": "3%"
+          }}
+          place="bottom-start"
+        >
+          <div className="text-xl font-anton pt-2">{toolHead}</div>
+          <div className="mt-2 leading-relaxed pb-2">{toolDescription}</div>
+        </Tooltip>
         {/* Hero Section  */}
         <div
           className="relative h-screen w-full bg-cover bg-center text-white font-poppins"
@@ -470,7 +506,10 @@ const Home = () => {
                 <img src={logo} className="size-24" />
               </span>
             </div>
-            <div ref={homeText1} className="text-[16px] sm:text-[23.6px] mt-2 font-medium">
+            <div
+              ref={homeText1}
+              className="text-[16px] sm:text-[23.6px] mt-2 font-medium"
+            >
               POURING PASSION, BREWING PURPOSE
             </div>
           </div>
@@ -480,10 +519,11 @@ const Home = () => {
           <div className="absolute left-1/2 bottom-[14%] sm:bottom-[8%] transform -translate-x-1/2 text-[18px]">
             <button class="exploreButton group relative m-1 cursor-pointer overflow-hidden border-2 border-white px-8 py-[6px]">
               <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
-              <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">Explore Now</span>
-            </button> 
+              <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
+                Explore Now
+              </span>
+            </button>
           </div>
-          
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between sm:items-center w-[90%] sm:w-[80%] mx-auto mt-12">
@@ -495,19 +535,13 @@ const Home = () => {
 
             <img src={ourStory} className=" sm:hidden size-[500px mt-8" />
             <div className="storyText text-[16.28px] text-pretty font-poppins mt-8 leading-relaxed ">
-              Once a meticulous mechanical engineer, my passion for precision
-              shifted when I discovered the intricate art of coffee. My team and I
-              founded Coffee Therapy, trading gears and gadgets for espresso
-              machines. We delved into the nuances of coffee culture, customer
-              experience, and brewing methods, honing our craft with relentless
-              dedication. At Coffee Therapy, each cup tells a tale of meticulous
-              craftsmanship and unwavering passion. As coffee connoisseurs, we
-              share our knowledge with patrons, guiding them through the sensory
-              journey of each sip. Our café became a haven for coffee enthusiasts,
-              drawn to the exquisite blends and the warmth of our hospitality.
-              Through our journey from engineers to café owners, we prove that
-              passion knows no bounds and that a well-brewed cup of coffee can
-              truly change lives.
+              "As a former mechanical engineer turned cafe owner, I blend
+              precision and passion in every cup. My expertise ensures efficient
+              operations and innovative brewing techniques, creating a haven
+              where coffee lovers revel in a blend of therapy and hospitality."
+              <span className="flex">
+                -Aniruddha
+              </span>
             </div>
           </div>
           <div className="hidden sm:block sm:w-[48%]">
@@ -520,7 +554,21 @@ const Home = () => {
             <div className="bestsellerText md:hidden font-anton text-[49.44px] md:text-[74.16px] my-4 text-center">
               OUR BESTSELLERS
             </div>
-            <img src={bestsellersCover} className="size-[500px w-full" />
+            <div className="relative">
+              <img src={bestsellersCover} className="w-full" />
+              <a data-tooltip-id="my-tooltip" place="bottom-end" 
+                className="absolute size-10 bg-white rounded-full top-[58%] left-1/4 cursor-pointer"
+                onMouseEnter={() => changeTooltip("classic")}  
+              />
+              <a data-tooltip-id="my-tooltip" place="bottom-end" 
+                className="absolute size-10 bg-white rounded-full top-[51%] left-[74%] cursor-pointer"
+                onMouseEnter={() => changeTooltip("latte")}  
+              />
+              <a data-tooltip-id="my-tooltip" place="bottom-end" 
+                className="absolute size-10 bg-white rounded-full top-[34%] left-[45%] cursor-pointer"
+                onMouseEnter={() => changeTooltip("cappuccino")}  
+              />
+            </div>
           </div>
           <div className="w-[90%] lg:w-[50%] px- text-white mt-8 md:mt-0">
             <div className="bestsellerText hidden md:block font-anton text-[49.44px] md:text-[74.16px] text-center">
@@ -531,19 +579,23 @@ const Home = () => {
                 <img src={best1} className="w-full" />
                 <div className="px-2 py-4 font-semibold">
                   White Mocha{" "}
-                  <span className="text-[12px] font-normal">with Chocolate</span>
+                  <span className="text-[12px] font-normal">
+                    with Chocolate
+                  </span>
                 </div>
                 <div className="px-2 ">
-                  Indulge in the creamy richness of a white chocolate mocha, where
-                  velvety white chocolate meets bold espresso for a blissful sip
-                  of sweetness.
+                  Indulge in the creamy richness of a white chocolate mocha,
+                  where velvety white chocolate meets bold espresso for a
+                  blissful sip of sweetness.
                 </div>
               </div>
               <div className="best2 w-[90% md:w-[48%] bg-[#1A1A1A] p-2 pb-8 text-[17.5px flex-1">
                 <img src={best2} className="w-full" />
                 <div className="px-2 py-4 font-semibold">
                   Cappuccino{" "}
-                  <span className="text-[12px] font-normal">with Chocolate</span>
+                  <span className="text-[12px] font-normal">
+                    with Chocolate
+                  </span>
                 </div>
                 <div className="px-2 ">
                   Savor our Cappuccino, where frothy steamed milk meets robust
@@ -553,13 +605,12 @@ const Home = () => {
               </div>
             </div>
             <div className=" flex justify-center md:justify-end mt-4 px-4">
-              {/* <button className="bestButton px-8 py-[6px] bg-transparent border-2">
-                View All
-              </button> */}
-              <button class="bestButton group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
+              <button onClick={() => navigate("/products")} class="bestButton group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
                 <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
-                <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">View All</span>
-              </button> 
+                <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
+                  View All
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -624,8 +675,8 @@ const Home = () => {
                     <img src={icon1} className="size-20 sm:size-16" />
                     <div className="font-semibold">Origin of coffee</div>
                     <div className="mt-2 font-light ">
-                      From Ethiopian legend to global phenomenon, coffee's origins
-                      trace a flavorful journey.
+                      From Ethiopian legend to global phenomenon, coffee's
+                      origins trace a flavorful journey.
                     </div>
                   </div>
                 </div>
@@ -666,13 +717,12 @@ const Home = () => {
               </div>
             </Slider>
           </div>
-          {/* <button className="brewButton mt-12 px-8 py-[6px] bg-transparent border-2">
-            View All
-          </button> */}
-          <button class="brewButton mt-12 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
+          <button onClick={() => navigate("/learn")} class="brewButton mt-12 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
             <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
-            <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">View All</span>
-          </button>  
+            <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
+              View All
+            </span>
+          </button>
         </div>
 
         <div
@@ -689,12 +739,11 @@ const Home = () => {
             the perfect cup.
           </div>
           <div className="px-2 flex justify-end mt-12">
-            {/* <button className="communityButton px-4 py-[6px] bg-transparent border-2">
-              Join The Community
-            </button> */}
-            <button class="contact3 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
+            <button  onClick={() => navigate("/community")} class="contact3 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
               <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
-              <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">Join The Community</span>
+              <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
+                Join The Community
+              </span>
             </button>
           </div>
         </div>
@@ -719,8 +768,8 @@ const Home = () => {
             <div className="test2 relative flex flex-col items-center bg-[#1A2C1E] drop-shadow-2xl h-[280px] w-[36%]">
               <img src={quote} className="test22 size-12 mt-8" />
               <div className="test22 mt-6 px-4 text-center text-[17.5px] ">
-                "Superb experience! Great vibes, great coffee, great people. 10/10
-                would recommend!"
+                "Superb experience! Great vibes, great coffee, great people.
+                10/10 would recommend!"
               </div>
               <div className="flex flex-col items-center absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
                 <img src={rev2} className="test22 size-24" />
@@ -748,8 +797,8 @@ const Home = () => {
             <div className="relative mb-28 bg-[#1A2C1E] h-[200px] mx-auto">
               <img src={quote} className="size-7 mx-auto mt-6" />
               <div className="mt-4 px-6 text-center text-sm">
-                "Superb experience! Great vibes, great coffee, great people. 10/10
-                would recommend!"
+                "Superb experience! Great vibes, great coffee, great people.
+                10/10 would recommend!"
               </div>
               <div className="flex flex-col items-center text-sm absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
                 <img src={rev2} className="size-20" />
@@ -789,10 +838,17 @@ const Home = () => {
             <div className="igText1 text-3xl font-light">
               #<span className="text-[#568759]">coffee</span>therapyinc
             </div>
-            <div className="igText2 text-5xl font-anton mt-3">CONNECT ON INSTAGRAM</div>
-            <a href="https://www.instagram.com/coffeetherapyinc?igsh=NWhkdmpsa244c2l1" className="igText3 group flex w-fit mx-auto justify-center items-center gap-1 text-xl mt-3">
+            <div className="igText2 text-5xl font-anton mt-3">
+              CONNECT ON INSTAGRAM
+            </div>
+            <a
+              href="https://www.instagram.com/coffeetherapyinc?igsh=NWhkdmpsa244c2l1"
+              className="igText3 group flex w-fit mx-auto justify-center items-center gap-1 text-xl mt-3"
+            >
               <img src={instagram} className="mt-1" />
-              <div className="text-xl group-hover:underline underline-offset-4">@coffeetherapyinc</div>
+              <div className="text-xl group-hover:underline underline-offset-4">
+                @coffeetherapyinc
+              </div>
             </a>
           </div>
           <div className="mt-12 flex w-full md:gap-8 justify-center">
@@ -837,10 +893,15 @@ const Home = () => {
               placeholder="Your Email Address"
             />
           </div> */}
-          
-          <button onClick={()=>navigate("/contact")} class="contact3 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]">
+
+          <button
+            onClick={() => navigate("/contact")}
+            class="contact3 group relative m-1 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]"
+          >
             <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
-            <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">Contact</span>
+            <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
+              Contact
+            </span>
           </button>
         </div>
       </div>

@@ -7,10 +7,11 @@ gsap.registerPlugin(scrollTrigger)
 
 import heroBg from "../../assets/images/products/heroBg.png";
 import downloadBg from "../../assets/images/home/contactBg.png";
-import qr from "../../assets/images/products/qr.png";
+import qr from "../../assets/images/products/qr.jpg";
 
 import zomato from "../../assets/images/icons/zomato.png";
 
+import menu from "../../assets/menu.pdf";
 
 const Products = () => {
   const [menuState, setMenuState] = useState("hot-coffee");
@@ -437,9 +438,11 @@ const Products = () => {
           </div>
           <div className="flex flex-col items-center sm:w-[35%] max-w-[550px]">
             <img src={qr} className="size-28"/>
-            <button className="px-8 py-[6px] bg-transparent border-2 mt-4">
-              Download Now
-            </button>
+            <a href={menu} download="menu" target='_blank'>
+              <button className="px-8 py-[6px] bg-transparent border-2 mt-4">
+                Download Now
+              </button>
+            </a>
           </div>
         </div>
       </div>
