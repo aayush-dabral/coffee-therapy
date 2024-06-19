@@ -557,17 +557,17 @@ const Home = () => {
             <div className="relative">
               <img src={bestsellersCover} className="w-full" />
               <a data-tooltip-id="my-tooltip" place="bottom-end" 
-                className="absolute size-10 bg-white rounded-full top-[58%] left-1/4 cursor-pointer"
+                className="absolute text-black flex items-center appearance-none justify-center text-3xl no-underline  size-10 bg-white rounded-full top-[58%] left-1/4 cursor-pointer"
                 onMouseEnter={() => changeTooltip("classic")}  
-              />
+              >+</a>
               <a data-tooltip-id="my-tooltip" place="bottom-end" 
-                className="absolute size-10 bg-white rounded-full top-[51%] left-[74%] cursor-pointer"
+                className="absolute text-black flex items-center appearance-none justify-center text-3xl no-underline size-10 bg-white rounded-full top-[51%] left-[74%] cursor-pointer"
                 onMouseEnter={() => changeTooltip("latte")}  
-              />
+              >+</a>
               <a data-tooltip-id="my-tooltip" place="bottom-end" 
-                className="absolute size-10 bg-white rounded-full top-[34%] left-[45%] cursor-pointer"
+                className="absolute text-black flex items-center appearance-none justify-center text-3xl no-underline  size-10 bg-white rounded-full top-[34%] left-[45%] cursor-pointer"
                 onMouseEnter={() => changeTooltip("cappuccino")}  
-              />
+              >+</a>
             </div>
           </div>
           <div className="w-[90%] lg:w-[50%] px- text-white mt-8 md:mt-0">

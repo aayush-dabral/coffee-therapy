@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
@@ -28,6 +28,10 @@ import { useNavigate } from "react-router-dom";
 
 const Community = () => {
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
 
   useGSAP(() => {
     gsap.from(".main-screen", {

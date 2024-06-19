@@ -3,6 +3,7 @@ import logo from "../../assets/images/ctLogo.png";
 import { navBarMenuItems } from '../../utils/routes';
 
 import menuOpen from "../../assets/images/icons/openMenu.png"
+import cross from "../../assets/images/icons/cross.png"
 
 const Header = () => {
     // const pathname = usePathname();
@@ -41,20 +42,19 @@ const Header = () => {
           >
             <img src={menuOpen} className="text-white text-2xl" />
           </div>
-        )}
-  
-        {sideOpen && (
+        )}        
           <>
-            <div className="w-3/4 h-screen bg-black absolute right-0 top-0 rounded-l-xl flex items-center flex-col ease-in-out duration-500 z-[999]">
-              <div className="flex flex-row-reverse w-full justify-between items-center py-4 px-6">
+            <div className={`w-3/4 h-screen ${sideOpen ? 'max-w-[350px]' : 'max-w-0'} overflow-hidden bg-black absolute right-0 top-0 rounded-l-xl flex items-center flex-col ease-in-out duration-500 z-[999]`}>
+              <div className="flex flex-row -reverse w-full justify-between items-center py-4 px-8">
                 <div className="flex justify-center gap-y-6 flex-row-reverse items-center text-white font-bold text-md">
-                  <img className="md:w-16 w-12" alt="logo" src={logo} /> COFFEE THERAPY INC.
+                  <img className="md:w-16 w-12" alt="logo" src={logo} />
                 </div>
                 <div onClick={() => setSideOpen(!sideOpen)}>
-                  {/* <FaX className="text-white text-md" /> */}X
+                  {/* <FaX className="text-white text-md" /> */}
+                  <img src={cross} className='size-[18px]'/>
                 </div>
               </div>
-              <div className="flex flex-col gap-y-8 px-8 py-8 w-full items-start">
+              <div className="flex flex-col gap-y-8 px-6 py-8 w-full items-start">
                 {navBarMenuItems.map((item) => (
                   <a
                     className={`text-white flex justify-start gap-x-8 text-[1.2rem] items-center w-full px-4 py-2 leading-4 text-end bor der-b-2 bord er-white/50`}
@@ -66,9 +66,11 @@ const Header = () => {
                 ))}
               </div>
             </div>
+            {sideOpen && (
             <div className=" w-screen h-screen bg-black/40 absolute top-0 left-0 pointer-events-none" />
+            )}
           </>
-        )}
+        {/* )} */}
       </div>
     );
 }

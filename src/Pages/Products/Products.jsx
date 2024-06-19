@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
@@ -15,6 +15,10 @@ import menu from "../../assets/menu.pdf";
 
 const Products = () => {
   const [menuState, setMenuState] = useState("hot-coffee");
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
 
   useGSAP(() =>{
     gsap.from(".main-screen", {
@@ -120,9 +124,18 @@ const Products = () => {
             <div className="homeText3 leading-none ">EXPERIENCE.</div>
           </div>
           <a href="https://zomato.onelink.me/xqzv/6h4cjb3z">
-            <button className="orderButton mt-8 px-6 py-1 flex items-center gap-2 text-[18px border-2 border-white">
+            {/* <button className="orderButton mt-8 px-6 py-1 flex items-center gap-2 text-[18px border-2 border-white">
               Order from
               <img src={zomato} className="w-16 mb-[2px]" />
+            </button> */}
+            <button
+              class="orderButton mt-8 group relative m- cursor-pointer overflow-hidden  border-2 border-white px-6 py-1"
+            >
+              <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
+              <span class="ease flex gap-2 items-center relative text-white transition duration-300 group-hover:text-[#05060A] group-hover:font-semibold">
+                Order from
+                <img src={zomato} className="w-16 mb-[2px]" />
+              </span>
             </button>
           </a>
         </div>
@@ -411,9 +424,19 @@ const Products = () => {
               <img src={zomato} className="w-16 mb-[2px]" />
             </button> */}
             <a href="https://zomato.onelink.me/xqzv/6h4cjb3z">
-              <button className="menuButton px-6 py-1 flex items-center gap-2 text-xs sm:text-base border-2 border-white">
+              {/* <button className="menuButton px-6 py-1 flex items-center gap-2 text-xs sm:text-base border-2 border-white">
                 Order from
                 <img src={zomato} className="w-16 mb-[2px]" />
+              </button> */}
+              <button
+                onClick={() => navigate("/contact")}
+                class="menuButton group relative m- cursor-pointer overflow-hidden  border-2 border-white px-6 py-1"
+              >
+                <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
+                <span class="ease flex gap-2 items-center relative text-white transition duration-300 group-hover:text-[#05060A] group-hover:font-semibold">
+                  Order from
+                  <img src={zomato} className="w-16 mb-[2px]" />
+                </span>
               </button>
             </a>
           </div>
@@ -439,8 +462,16 @@ const Products = () => {
           <div className="flex flex-col items-center sm:w-[35%] max-w-[550px]">
             <img src={qr} className="size-28"/>
             <a href={menu} download="menu" target='_blank'>
-              <button className="px-8 py-[6px] bg-transparent border-2 mt-4">
+              {/* <button className="px-8 py-[6px] bg-transparent border-2 mt-4">
                 Download Now
+              </button> */}
+              <button
+                class="group relative mt-4 cursor-pointer overflow-hidden  border-2 border-white px-8 py-[6px]"
+              >
+                <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
+                <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
+                  Download Now
+                </span>
               </button>
             </a>
           </div>

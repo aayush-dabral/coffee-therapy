@@ -6,11 +6,11 @@ import scrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(scrollTrigger)
 
 import img1 from '../../assets/images/gallery/ambience/img1.webp'
-import img2 from '../../assets/images/gallery/ambience/img2.png'
-import img3 from '../../assets/images/gallery/ambience/img3.png'
-import img4 from '../../assets/images/gallery/ambience/img4.png'
-import img5 from '../../assets/images/gallery/menu/img5.png'
-import img6 from '../../assets/images/gallery/menu/img6.png'
+import img2 from '../../assets/images/gallery/ambience/img2.webp'
+import img3 from '../../assets/images/gallery/ambience/img3.webp'
+import img4 from '../../assets/images/gallery/ambience/img4.webp'
+import img5 from '../../assets/images/gallery/menu/img5.webp'
+import img6 from '../../assets/images/gallery/menu/img6.webp'
 import img7 from '../../assets/images/gallery/menu/img7.png'
 import img8 from '../../assets/images/gallery/menu/img8.png'
 
@@ -180,43 +180,43 @@ const Gallery = () => {
               {selectedCategory === "all" ? (
                 <>
                     {/* <img src='' />      */}
-                  <div className=' flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img1} className='img1 sm:w-[55%]'/>
-                    <img src={img2} className='img2 sm:w-[45%]'/>
+                  <div className=' flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img1} className='img1 sm:w-[50%]'/>
+                    <img src={img2} className='img2 sm:w-[50%]'/>
                   </div>
-                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img3} className='img3 sm:w-[45%]'/>
-                    <img src={img4} className='img4 sm:w-[55%]'/>
+                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img3} className='img3 sm:w-[50%]'/>
+                    <img src={img4} className='img4 sm:w-[50%]'/>
                   </div>
-                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img5} className='img5 sm:w-[55%]'/>
-                    <img src={img6} className='img6 sm:w-[45%]'/>
+                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img5} className='img5 sm:w-[50%]'/>
+                    <img src={img6} className='img6 sm:w-[50%]'/>
                   </div>
-                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img7} className='img7 sm:w-[45%]'/>
-                    <img src={img8} className='img8 sm:w-[55%]'/>
+                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img7} className='img7 sm:w-[50%]'/>
+                    <img src={img8} className='img8 sm:w-[50%]'/>
                   </div>
                 </>
               ) : selectedCategory === "ambience" ? (
                 <>
-                  <div className='flex flex-col sm:flex-row justify-between  gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img1} className='img1 sm:w-[55%]'/>
-                    <img src={img2} className='img2 sm:w-[45%]'/>
+                  <div className='flex flex-col sm:flex-row justify-between  gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img1} className='img1 sm:w-[50%]'/>
+                    <img src={img2} className='img2 sm:w-[50%]'/>
                   </div>
-                  <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img3} className='img3 sm:w-[45%]'/>
-                    <img src={img4} className='img4 sm:w-[55%]'/>
+                  <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img3} className='img3 sm:w-[50%]'/>
+                    <img src={img4} className='img4 sm:w-[50%]'/>
                   </div>
                 </>
               ) : (
                 <>
-                  <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img5} className='img1 sm:w-[55%]'/>
-                    <img src={img6} className='img2 sm:w-[45%]'/>
+                  <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img5} className='img1 sm:w-[50%]'/>
+                    <img src={img6} className='img2 sm:w-[50%]'/>
                   </div>
-                  <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h-[340px]'>
-                    <img src={img7} className='img3 sm:w-[45%]'/>
-                    <img src={img8} className='img4 sm:w-[55%]'/>
+                  <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <img src={img7} className='img3 sm:w-[50%]'/>
+                    <img src={img8} className='img4 sm:w-[50%]'/>
                   </div>
                 </>
               )}

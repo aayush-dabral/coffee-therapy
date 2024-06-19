@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
@@ -18,6 +18,10 @@ const Learn = () => {
 
   const [farmView, setFarmView] = useState(false);
   const [espressoView, setEspressoView] = useState(false);
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
 
   useGSAP(() =>{
     gsap.from(".main-screen", {
@@ -423,8 +427,8 @@ const Learn = () => {
               sip.
             </div>
             <div
-                className={`transition-all ease-in-out duration-300 overflow-hidden mt-4 ${
-                  espressoView ? "max-h-[400px]" : "max-h-0"
+                className={`espText transition-all ease-in-out duration-300 overflow-hidden mt-4 ${
+                  espressoView ? "blo ck max-h- [600px]" : "hidd en max-h -0"
                 } `}
               >
                 Key things to keep in mind while pulling an espresso shot is:
@@ -450,7 +454,7 @@ const Learn = () => {
                 These espresso shots are used to make most of our day-to-day coffees like cappuccino, latte, 
                 americano, flat white and a whole lot more.
               </div>
-            <div className="summaryText sm:hid den mt-8 text-center text-[20.5px] leading-[2.3]">
+            {/* <div className="summaryText sm:hid den mt-8 text-center text-[20.5px] leading-[2.3]">
               {!espressoView ? (
                 <div className="flex justify-center gap-2 w-full ">
                   <div
@@ -472,7 +476,7 @@ const Learn = () => {
                   <div className="no-underline">v</div>
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
