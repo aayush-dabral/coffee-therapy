@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 gsap.registerPlugin(scrollTrigger);
 
@@ -15,8 +17,32 @@ const Contact = () => {
   const form1 = useRef();
   const form2 = useRef();
 
+  const isFormEmpty = (formCheck) => {
+    const form = formCheck.current;
+    const inputs = form.querySelectorAll('input');
+    for (let input of inputs) {
+      if (input.value.trim() === '') {
+        return true; // Form is empty
+      }
+    }
+    return false; // Form is not empty
+  };
+
+  const clearForm = (formCheck) => {
+    const form = formCheck.current;
+    const inputs = form.querySelectorAll('input');
+    for (let input of inputs) {
+      input.value = ''; // Clear the input value
+    }
+  };
+
   const sendEmail1 = (e) => {
     e.preventDefault();
+
+    if(isFormEmpty(form1)){
+      toast.error('Please enter all fields to proceed');
+      return;
+    }
 
     emailjs
       .sendForm('service_9kn7lba', 'template_u10ohs4', form1.current, {
@@ -25,16 +51,18 @@ const Contact = () => {
       .then(
         () => {
           console.log('SUCCESS!');
+          toast.success('Message sent succesfully!');
+          clearForm(form1)
         },
         (error) => {
           console.log('FAILED...', error.text);
+          toast.error('Unable to send message, please try again later');
         },
       );
   };
 
   const sendEmail2 = (e) => {
     e.preventDefault();
-    console.log(form2.current)
 
     emailjs
       .sendForm('service_9kn7lba', 'template_jovjiva', form2.current, {
@@ -42,10 +70,12 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
+          // console.log('SUCCESS!');
+          toast.success('Message sent succesfully!');
+          clearForm(form2)
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          toast.error('Unable to send message, please try again later');
         },
       );
   };
@@ -246,6 +276,7 @@ const Contact = () => {
   });
   return (
     <div className="main-screen font-poppins text-white">
+      <ToastContainer />
       <div
         className="flex flex-col items-center justify-center h-[500px] sm:h-[500px] w-full bg-cover bg-center text-white text-center"
         style={{ backgroundImage: `url(${heroBg})` }}
@@ -256,10 +287,10 @@ const Contact = () => {
           website, please feel free to fill out the contact form below. We aim
           to respond to all inquiries within 24 business hours.
         </div>
-        <div className="homeText3 flex justify-center items-center gap-1 text-xl mt-4">
+        <a href="https://www.instagram.com/coffeetherapyinc?igsh=NWhkdmpsa244c2l1" target="blank" className="homeText3 flex justify-center items-center gap-1 text-xl mt-4">
           <img src={instagram} className="mt-1 size-5" />
           <div className="text-[18.6px] font-base">@coffeetherapyinc</div>
-        </div>
+        </a>
       </div>
 
       <div className="mt-12">

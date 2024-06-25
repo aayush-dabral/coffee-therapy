@@ -91,7 +91,7 @@ const Gallery = () => {
       x: -50,
       ease: "circ",
       opacity: 0,
-      delay: 0.3
+      delay: 1
     })
     gsap.from(".img4", {
       scrollTrigger: ".img4",
@@ -181,27 +181,28 @@ const Gallery = () => {
                 <>
                     {/* <img src='' />      */}
                   <div className=' flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img1} className='img1 sm:w-[50%]'/>
-                    <img src={img2} className='img2 sm:w-[50%]'/>
+                    <img src={img1} className='img1 sm:w-[33%]'/>
+                    <img src={img2} className='img2 sm:w-[33%]'/>
+                    <img src={img3} className='img3 sm:w-[33%]'/>
                   </div>
                   <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img3} className='img3 sm:w-[50%]'/>
                     <img src={img4} className='img4 sm:w-[50%]'/>
-                  </div>
-                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
                     <img src={img5} className='img5 sm:w-[50%]'/>
-                    <img src={img6} className='img6 sm:w-[50%]'/>
                   </div>
                   <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img7} className='img7 sm:w-[50%]'/>
-                    <img src={img8} className='img8 sm:w-[50%]'/>
+                    <img src={img6} className='img6 sm:w-[33%]'/>
+                    <img src={img7} className='img7 sm:w-[33%]'/>
+                    <img src={img8} className='img8 sm:w-[33%]'/>
+                  </div>
+                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
                   </div>
                 </>
               ) : selectedCategory === "ambience" ? (
                 <>
                   <div className='flex flex-col sm:flex-row justify-between  gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img1} className='img1 sm:w-[50%]'/>
-                    <img src={img2} className='img2 sm:w-[50%]'/>
+                    <img src={img1} className='img1 sm:w-[33%]'/>
+                    <img src={img2} className='img2 sm:w-[33%]'/>
+                    <img src={img3} className='img3 sm:w-[33%]'/>
                   </div>
                   <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
                     <img src={img3} className='img3 sm:w-[50%]'/>
@@ -211,8 +212,9 @@ const Gallery = () => {
               ) : (
                 <>
                   <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img5} className='img1 sm:w-[50%]'/>
-                    <img src={img6} className='img2 sm:w-[50%]'/>
+                    <img src={img5} className='img1 sm:w-[33%]'/>
+                    <img src={img6} className='img2 sm:w-[33%]'/>
+                    <img src={img8} className='img4 sm:w-[33%]'/>
                   </div>
                   <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
                     <img src={img7} className='img3 sm:w-[50%]'/>

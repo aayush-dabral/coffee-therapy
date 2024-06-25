@@ -11,16 +11,16 @@ import dummy1 from "../../assets/images/home/dummy1.jpeg";
 import dummy2 from "../../assets/images/home/dummy2.jpeg";
 import dummy3 from "../../assets/images/home/dummy3.jpeg";
 import dummy4 from "../../assets/images/home/dummy4.jpeg";
-import brew1 from "../../assets/images/community/brew1.png";
-import brew2 from "../../assets/images/community/brew2.png";
-import brew3 from "../../assets/images/community/brew3.png";
-import brew4 from "../../assets/images/community/brew4.png";
+import brew1 from "../../assets/images/community/brew1.webp";
+import brew2 from "../../assets/images/community/brew2.webp";
+import brew3 from "../../assets/images/community/brew3.webp";
+import brew4 from "../../assets/images/community/brew4.webp";
 
 import icon1 from "../../assets/images/community/icon1.png";
 import icon2 from "../../assets/images/community/icon2.png";
 import icon3 from "../../assets/images/community/icon3.png";
 import icon4 from "../../assets/images/community/icon4.png";
-import brewBg from "../../assets/images/community/brewBg.png";
+import brewBg from "../../assets/images/home/brewBg.png";
 import contactBg from "../../assets/images/home/contactBg.png";
 
 import instagram from "../../assets/images/icons/instagram.png";
@@ -346,9 +346,11 @@ const Community = () => {
         </div>
         <div className="w-[80%] sm:w-[80%] flex flex-col sm:flex-row justify-center gap-8 mt-12">
           <div className="brew1 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
-            <img src={brew1} className="sm:w-[40%] h-[280px] w-full" />
+            <div className="sm:w-[40%] h-[280px] w-full overflow-hidden">
+              <img src={brew1} className="w-full h-full" />
+            </div>
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
-              <img src={icon1} className="size-20 sm:size-16" />
+              <img src={icon1} className="" />
               <div className="font-semibold">Brewing Basics Bonanza</div>
               <div className="mt-2 font-light ">
                 Master the fundamentals of coffee brewing with this introductory
@@ -360,9 +362,11 @@ const Community = () => {
           </div>
 
           <div className="brew2 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
-            <img src={brew2} className="sm:w-[40%] h-[280px] w-full" />
+            <div className="sm:w-[40%] h-[280px] w-full overflow-hidden">
+              <img src={brew2} className="w-full h-full" />
+            </div>
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
-              <img src={icon2} className="size-20 sm:size-16" />
+              <img src={icon2} className="" />
               <div className="font-semibold">Single-Origin Spotlight</div>
               <div className="mt-2 font-light">
                 Embark on a coffee journey to the Coffee Origin! Learn about the
@@ -375,7 +379,9 @@ const Community = () => {
 
         <div className="w-[80%] sm:w-[80%] flex flex-col sm:flex-row justify-center gap-8 mt-8">
           <div className="brew3 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
-            <img src={brew3} className="sm:w-[40%] h-[280px] w-full" />
+            <div className="sm:w-[40%] h-[280px] w-full overflow-hidden">
+              <img src={brew3} className="" />
+            </div>
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
               <img src={icon3} className="size-20 sm:size-16" />
               <div className="font-semibold">Coffee Cupping Experience</div>
@@ -388,7 +394,9 @@ const Community = () => {
           </div>
 
           <div className="brew4 flex flex-col sm:flex-row sm:w-1/2 items-center bg-[#1A1A1A]">
-            <img src={brew4} className="sm:w-[40%] h-[280px] w-full" />
+            <div className="sm:w-[40%] h-[280px] w-full overflow-hidden">
+              <img src={brew4} className="" />
+            </div>
             <div className="sm:w-[60%] px-6 py-4 flex gap-4 flex-col items-center text-center text-[14px]">
               <img src={icon4} className="size-20 sm:size-16" />
               <div className="font-semibold">Latte Art Lab</div>

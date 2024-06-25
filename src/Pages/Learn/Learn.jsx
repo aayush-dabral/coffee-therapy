@@ -6,7 +6,7 @@ import scrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(scrollTrigger)
 
 import heroBg from "../../assets/images/learn/heroBg.png";
-import espressoBg from "../../assets/images/home/contactBg.png";
+import espressoBg from "../../assets/images/learn/espressoBg.png";
 import v60 from "../../assets/images/learn/v60.webp";
 import french from "../../assets/images/learn/french.webp";
 import coldBrew from "../../assets/images/learn/coldBrew.webp";

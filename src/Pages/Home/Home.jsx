@@ -47,6 +47,19 @@ const Home = () => {
   const navigate = useNavigate();
   const [toolHead, setToolHead] = useState("CLASSIC COLD BREW")
   const [toolDescription, setToolDescription] = useState("Smooth, bold, and refreshingly chilled, our cold brew is a harmonious blend of rich flavors brewed for 18 hours to perfection.")
+  const scrollRef = useRef(null)
+
+  const executeScroll = () => {
+    const element = scrollRef.current;
+    const offset = 50; // Adjust this value to scroll above the element
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - offset;
+  
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  };
 
   var settings = {
     dots: true,
@@ -517,7 +530,7 @@ const Home = () => {
             <div className="exploreText"> Explore Now </div>
           </button> */}
           <div className="absolute left-1/2 bottom-[14%] sm:bottom-[8%] transform -translate-x-1/2 text-[18px]">
-            <button class="exploreButton group relative m-1 cursor-pointer overflow-hidden border-2 border-white px-8 py-[6px]">
+            <button onClick={executeScroll} class="exploreButton group relative m-1 cursor-pointer overflow-hidden border-2 border-white px-8 py-[6px]">
               <span class="ease absolute top-1/2 h-0 w-64 origin-center -translate-x-20 rotate-45 bg-white transition-all duration-300 group-hover:h-64 group-hover:-translate-y-32"></span>
               <span class="ease relative text-white transition duration-300 group-hover:text-[#05060A] font-semibold">
                 Explore Now
@@ -526,7 +539,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between sm:items-center w-[90%] sm:w-[80%] mx-auto mt-12">
+        <div ref={scrollRef} className="flex flex-col sm:flex-row justify-between sm:items-center w-[90%] sm:w-[80%] mx-auto mt-12">
           <div className="sm:w-[58%] text-white">
             <div className="storyHeading font-anton text-[49.44px] sm:text-[74.16px] ">
               OUR STORY
@@ -557,17 +570,17 @@ const Home = () => {
             <div className="relative">
               <img src={bestsellersCover} className="w-full" />
               <a data-tooltip-id="my-tooltip" place="bottom-end" 
-                className="absolute text-black flex items-center appearance-none justify-center text-3xl no-underline  size-10 bg-white rounded-full top-[58%] left-1/4 cursor-pointer"
+                className="absolute text-black flex items-center drop-shadow-white animate-pulse appearance-none justify-center text-3xl no-underline  size-10 bg-white rounded-full top-[58%] left-1/4 cursor-pointer"
                 onMouseEnter={() => changeTooltip("classic")}  
-              >+</a>
+              ></a>
               <a data-tooltip-id="my-tooltip" place="bottom-end" 
-                className="absolute text-black flex items-center appearance-none justify-center text-3xl no-underline size-10 bg-white rounded-full top-[51%] left-[74%] cursor-pointer"
+                className="absolute text-black flex items-center drop-shadow-white animate-pulse appearance-none justify-center text-3xl no-underline size-10 bg-white rounded-full top-[51%] left-[74%] cursor-pointer"
                 onMouseEnter={() => changeTooltip("latte")}  
-              >+</a>
+              ></a>
               <a data-tooltip-id="my-tooltip" place="bottom-end" 
-                className="absolute text-black flex items-center appearance-none justify-center text-3xl no-underline  size-10 bg-white rounded-full top-[34%] left-[45%] cursor-pointer"
+                className="absolute text-black flex items-center drop-shadow-white animate-pulse appearance-none justify-center text-3xl no-underline  size-10 bg-white rounded-full top-[34%] left-[45%] cursor-pointer"
                 onMouseEnter={() => changeTooltip("cappuccino")}  
-              >+</a>
+              ></a>
             </div>
           </div>
           <div className="w-[90%] lg:w-[50%] px- text-white mt-8 md:mt-0">
