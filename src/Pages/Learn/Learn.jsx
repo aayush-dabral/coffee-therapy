@@ -663,10 +663,13 @@ const Learn = () => {
           <div className="coldHeading font-anton text-[45.83px] text-center sm:text-left">
             COLD BREW
           </div>
-          <img
+          {/* <img
             src={coldBrew}
             className="sm:hidden sm:h-[500px] mx-auto mt-4 "
-          />
+          /> */}
+          <div className="sm:hidden sm:h-[500px] mx-auto mt-4  overflow-hidden">
+            <img src={coldBrew} className="h- [550px] size-full object-fill mx-auto" />
+          </div>
           <div className="coldLine w-[19%] h-[2px] bg-white -mt-1" />
           <div className="coldText text-[17.5px] text-justify font-poppins mt-8 ">
             <ul className="list-disc pl-6">
