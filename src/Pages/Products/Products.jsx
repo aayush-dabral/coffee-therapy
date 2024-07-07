@@ -456,7 +456,7 @@ const Products = () => {
                 OR SCAN THIS QR CODE!
             </div>
             <div className="sm:w-[70%] mt-6">
-                #coffeetherapyinc
+                #coffeetherapyartisan
             </div>
           </div>
           <div className="flex flex-col items-center sm:w-[35%] max-w-[550px]">

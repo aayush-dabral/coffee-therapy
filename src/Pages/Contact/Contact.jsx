@@ -289,7 +289,7 @@ const Contact = () => {
         </div>
         <a href="https://www.instagram.com/coffeetherapyinc?igsh=NWhkdmpsa244c2l1" target="blank" className="homeText3 flex justify-center items-center gap-1 text-xl mt-4">
           <img src={instagram} className="mt-1 size-5" />
-          <div className="text-[18.6px] font-base">@coffeetherapyinc</div>
+          <div className="text-[18.6px] font-base">@coffeetherapyartisan</div>
         </a>
       </div>
 
@@ -345,7 +345,7 @@ const Contact = () => {
         </div>
         <div className="text1 w-[90%] sm:w-[60%] mx-auto mt-12 text-[20.32px] font-light">
           Are you interested in joining our growing community and becoming a
-          Coffee Therapy Inc. franchise owner? We're passionate about sharing
+          Coffee Therapy Artisan franchise owner? We're passionate about sharing
           our love of coffee and creating vibrant community spaces.
         </div>
         <div className="w-[90%] sm:w-[60%] mt-12 mx-auto flex flex-col sm:flex-row justify-between gap-4">

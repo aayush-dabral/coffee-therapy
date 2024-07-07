@@ -848,7 +848,7 @@ const Home = () => {
         <div className="flex flex-col justify-center items-center w-[85%] mx-auto py-16 pb-20 text-white">
           <div className="text-center">
             <div className="igText1 text-3xl font-light">
-              #<span className="text-[#568759]">coffee</span>therapyinc
+              #<span className="text-[#568759]">coffee</span>therapyartisan
             </div>
             <div className="igText2 text-5xl font-anton mt-3">
               CONNECT ON INSTAGRAM
@@ -859,7 +859,7 @@ const Home = () => {
             >
               <img src={instagram} className="mt-1" />
               <div className="text-xl group-hover:underline underline-offset-4">
-                @coffeetherapyinc
+                @coffeetherapyartisan
               </div>
             </a>
           </div>

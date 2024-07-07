@@ -32,7 +32,7 @@ const Footer = () => {
     >
       <div onClick={() => navigate("/")} className='flex justify-center items-center cursor-pointer gap-4 text-xl sm:text-3xl font-semibold'>
         <img src={logo} className='size-[60px] sm:size-[75px]'/>
-        <div>COFFEE THERAPY INC.</div>
+        <div>COFFEE THERAPY ARTISAN</div>
       </div>
       <div className='flex flex-co sm:flex-row justify-center gap-4 sm:gap-12 flex-wrap px-4'>
         {items}
@@ -57,7 +57,7 @@ const Footer = () => {
             <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white"></span>
         </div> */}
       </div>
-      <div className='justify-center text-sm sm:text-base text-center pt-12 pb-4'>© 2024 Coffee Therapy Inc. All Rights Reserved.</div>
+      <div className='justify-center text-sm sm:text-base text-center pt-12 pb-4'>© 2024 Coffee Therapy Artisan All Rights Reserved.</div>
     </div>
   )
 }

@@ -293,7 +293,7 @@ const Community = () => {
           <div className="igLine sm:hidden mx-auto w-[90%] h-[2px] bg-white mt-4" />
           <div className="igText2 text-[16.5px] text-center font-light leading-loose mt-4">
             Join the conversation and get a glimpse into our daily life! Share
-            your photos using our hashtag #coffeetherapyinc Community and see
+            your photos using our hashtag #coffeetherapyartisan Community and see
             yourself featured on our page.
           </div>
           <a
@@ -302,7 +302,7 @@ const Community = () => {
           >
             <img src={instagram} className="mt-1" />
             <div className="text-xl group-hover:underline underline-offset-4">
-              @coffeetherapyinc
+              @coffeetherapyartisan
             </div>
           </a>
         </div>
@@ -436,7 +436,7 @@ const Community = () => {
               We're always happy to connect with our community.
             </div>
             <div className="w-[90%] sm:w-full [70%] mt-4 mx-auto sm:mx-0">
-              #coffeetherapyinc
+              #coffeetherapyartisan
             </div>
             <button
               onClick={() => navigate("/contact")}

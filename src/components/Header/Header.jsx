@@ -27,7 +27,7 @@ const Header = () => {
         {!sideOpen && (
           <a href='/' className="flex gap-2 md:w-1/ 3 items-center md:absolut md:top-0 md:left-[47.5% relative md:py-2  py-4 md:px-16 px-8">
             <img className="md:w-12 w-12" alt="logo" src={logo} />
-            <div className='font-semibold'>COFFEE THERAPY INC.</div>
+            <div className='font-semibold'>COFFEE THERAPY ARTISAN</div>
           </a>
         )}
 
