@@ -5,15 +5,22 @@ import scrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(scrollTrigger)
 
-import img1 from '../../assets/images/gallery/ambience/img1.webp'
-import img2 from '../../assets/images/gallery/ambience/img2.webp'
-import img3 from '../../assets/images/gallery/ambience/img3.webp'
-import img4 from '../../assets/images/gallery/ambience/img4.webp'
-import img5 from '../../assets/images/gallery/menu/img5.webp'
-import img6 from '../../assets/images/gallery/menu/img6.webp'
-import img7 from '../../assets/images/gallery/menu/img7.png'
-import img8 from '../../assets/images/gallery/menu/img8.png'
-
+import ambience1 from '../../assets/images/gallery/ambience/img1.jpg'
+import ambience2 from '../../assets/images/gallery/ambience/img2.jpg'
+import ambience3 from '../../assets/images/gallery/ambience/img3.jpg'
+import ambience4 from '../../assets/images/gallery/ambience/img4.jpg'
+import ambience5 from '../../assets/images/gallery/ambience/img5.jpg'
+import ambience6 from '../../assets/images/gallery/ambience/img6.jpg'
+import ambience7 from '../../assets/images/gallery/ambience/img7.jpg'
+import ambience8 from '../../assets/images/gallery/ambience/img8.jpg'
+import menu1 from '../../assets/images/gallery/menu/img1.webp'
+import menu2 from '../../assets/images/gallery/menu/img2.jpg'
+import menu3 from '../../assets/images/gallery/menu/img3.jpg'
+import menu4 from '../../assets/images/gallery/menu/img4.webp'
+import menu5 from '../../assets/images/gallery/menu/img5.jpg'
+import menu6 from '../../assets/images/gallery/menu/img6.webp'
+import menu7 from '../../assets/images/gallery/menu/img7.jpg'
+import menu8 from '../../assets/images/gallery/menu/img8.jpg'
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
@@ -130,6 +137,44 @@ const Gallery = () => {
       opacity: 0,
       delay: 0.2
     })
+    
+    gsap.from(".img9", {
+      scrollTrigger: ".img9",
+      x: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.3
+    })
+
+    gsap.from(".img10", {
+      scrollTrigger: ".img10",
+      x: -50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".img11", {
+      scrollTrigger: ".img11",
+      x: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+
+    gsap.from(".img12", {
+      scrollTrigger: ".img12",
+      x: -50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
+    gsap.from(".img13", {
+      scrollTrigger: ".img13",
+      x: 50,
+      ease: "circ",
+      opacity: 0,
+      delay: 0.2
+    })
   })
   return (
     <div className='font-poppins text-white'>
@@ -181,44 +226,119 @@ const Gallery = () => {
                 <>
                     {/* <img src='' />      */}
                   <div className=' flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img1} className='img1 sm:w-[33%]'/>
-                    <img src={img2} className='img2 sm:w-[33%]'/>
-                    <img src={img3} className='img3 sm:w-[33%]'/>
+                    <div className='img1 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience1} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img2 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience3} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img3 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience2} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
                   <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img4} className='img4 sm:w-[50%]'/>
-                    <img src={img5} className='img5 sm:w-[50%]'/>
+                    <div className='img4 sm:w-[50%] overflow-hidden'>
+                      <img src={menu1} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img5 sm:w-[50%] overflow-hidden'>
+                      <img src={menu2} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
                   <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img6} className='img6 sm:w-[33%]'/>
-                    <img src={img7} className='img7 sm:w-[33%]'/>
-                    <img src={img8} className='img8 sm:w-[33%]'/>
+                    <div className='img6 sm:w-[33%] overflow-hidden'>
+                      <img src={menu3} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img7 sm:w-[33%] overflow-hidden'>
+                      <img src={menu4} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img8 sm:w-[33%] overflow-hidden'>
+                      <img src={menu5} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
-                  <div className='img1 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                  <div className='img9 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <div className='img1 sm:w-[50%] overflow-hidden'>
+                      <img src={ambience4} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img10 sm:w-[50%] overflow-hidden'>
+                      <img src={ambience5} className=' w-full h-full object-cover'/>
+                    </div>
+                  </div>
+                  <div className='img11 flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
+                    <div className='img3 sm:w-[33%] overflow-hidden'>
+                      <img src={menu6} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img12 sm:w-[33%] overflow-hidden'>
+                      <img src={menu7} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img13 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience8} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
                 </>
               ) : selectedCategory === "ambience" ? (
                 <>
                   <div className='flex flex-col sm:flex-row justify-between  gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img1} className='img1 sm:w-[33%]'/>
-                    <img src={img2} className='img2 sm:w-[33%]'/>
-                    <img src={img3} className='img3 sm:w-[33%]'/>
+                    <div className='img1 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience7} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img2 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience3} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img3 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience6} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
                   <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img3} className='img3 sm:w-[50%]'/>
-                    <img src={img4} className='img4 sm:w-[50%]'/>
+                    <div className='img4 sm:w-[50%] overflow-hidden'>
+                      <img src={ambience2} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img5 sm:w-[50%] overflow-hidden'>
+                      <img src={ambience1} className=' w-full h-full object-cover'/>
+                    </div>
+                  </div>
+                  <div className='flex flex-col sm:flex-row justify-between  gap-4 sm:gap-8 sm:h- [340px]'>
+                    <div className='img6 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience8} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img7 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience4} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img8 sm:w-[33%] overflow-hidden'>
+                      <img src={ambience5} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
                 </>
               ) : (
-                <>
-                  <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img5} className='img1 sm:w-[33%]'/>
-                    <img src={img6} className='img2 sm:w-[33%]'/>
-                    <img src={img8} className='img4 sm:w-[33%]'/>
+                <>                  
+                  <div className='flex flex-col sm:flex-row justify-between  gap-4 sm:gap-8 sm:h- [340px]'>
+                    <div className='img1 sm:w-[33%] overflow-hidden'>
+                      <img src={menu4} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img2 sm:w-[33%] overflow-hidden'>
+                      <img src={menu3} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img3 sm:w-[33%] overflow-hidden'>
+                      <img src={menu1} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
                   <div className='flex flex-col sm:flex-row justify-between gap-4 sm:gap-8 sm:h- [340px]'>
-                    <img src={img7} className='img3 sm:w-[50%]'/>
-                    <img src={img8} className='img4 sm:w-[50%]'/>
+                    <div className='img4 sm:w-[50%] overflow-hidden'>
+                      <img src={menu5} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img5 sm:w-[50%] overflow-hidden'>
+                      <img src={menu2} className=' w-full h-full object-cover'/>
+                    </div>
+                  </div>
+                  <div className='flex flex-col sm:flex-row justify-between  gap-4 sm:gap-8 sm:h- [340px]'>
+                    <div className='img6 sm:w-[33%] overflow-hidden'>
+                      <img src={menu7} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img7 sm:w-[33%] overflow-hidden'>
+                      <img src={menu6} className=' w-full h-full object-cover'/>
+                    </div>
+                    <div className='img8 sm:w-[33%] overflow-hidden'>
+                      <img src={menu8} className=' w-full h-full object-cover'/>
+                    </div>
                   </div>
                 </>
               )}

@@ -608,10 +608,12 @@ const Learn = () => {
           <div className="frenchHeading font-anton text-[45.83px] text-center sm:text-left">
             FRENCH PRESS
           </div>
-          <img
-            src={french}
-            className="sm:hidden sm:h-[500px] mr-auto mt-4 sm:-mt-12"
-          />
+          <div className="sm:hidden sm:h-[500px] mr-auto mt-4 sm:-mt-12 overflow-hidden">
+            <img
+              src={french}
+              className="object-fill"
+            />
+          </div>
           <div className="frenchLine hidden sm:block w-[19%] h-[2px] bg-white sm:-mt-1" />
           <div className="frenchText text-[16.5px] text-justify font-poppins font-light mt-8 ">
             <ul className="list-disc pl-6">
@@ -702,8 +704,8 @@ const Learn = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden sm:flex w-[38%]">
-          <img src={coldBrew} className="h-[500px] mx-auto" />
+        <div className="hidden sm:flex w-[38%] overflow-hidden">
+          <img src={coldBrew} className="h- [550px] size-full object-fill mx-auto" />
         </div>
       </div>
 

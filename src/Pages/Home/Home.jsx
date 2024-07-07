@@ -14,15 +14,15 @@ import 'react-tooltip/dist/react-tooltip.css'
 
 import homeBg from "../../assets/images/backgrounds/homeBg.png";
 import logo from "../../assets/images/ctLogo.png";
-import ourStory from "../../assets/images/home/ourStory.webp";
+import ourStory from "../../assets/images/home/ourStory.png";
 import bestsellersCover from "../../assets/images/home/bestsellersCover.webp";
 import best1 from "../../assets/images/home/best1.webp";
 import best2 from "../../assets/images/home/best2.webp";
 import communityBg from "../../assets/images/home/communityBg.png";
 import quote from "../../assets/images/home/quote.png";
-import rev1 from "../../assets/images/home/rev1.png";
-import rev2 from "../../assets/images/home/rev2.png";
-import rev3 from "../../assets/images/home/rev3.png";
+import rev1 from "../../assets/images/home/rev1.jpg";
+import rev2 from "../../assets/images/home/rev2.jpg";
+import rev3 from "../../assets/images/home/rev3.jpg";
 import dummy1 from "../../assets/images/home/dummy1.jpeg";
 import dummy2 from "../../assets/images/home/dummy2.jpeg";
 import dummy3 from "../../assets/images/home/dummy3.jpeg";
@@ -38,7 +38,6 @@ import icon1 from "../../assets/images/community/icon2.png";
 import icon3 from "../../assets/images/community/icon3.png";
 
 import instagram from "../../assets/images/icons/instagram.png";
-import alert from "../../assets/images/icons/alert.png";
 
 import "./style.css";
 import { useNavigate } from "react-router-dom";
@@ -515,7 +514,7 @@ const Home = () => {
               THERAPY
               <br />
               <span className="flex items-center gap-6">
-                INC.
+                ARTISAN
                 <img src={logo} className="size-24" />
               </span>
             </div>
@@ -553,7 +552,7 @@ const Home = () => {
               operations and innovative brewing techniques, creating a haven
               where coffee lovers revel in a blend of therapy and hospitality."
               <span className="flex">
-                -Aniruddha
+                -Aniruddha Anwekar
               </span>
             </div>
           </div>
@@ -592,9 +591,6 @@ const Home = () => {
                 <img src={best1} className="w-full" />
                 <div className="px-2 py-4 font-semibold">
                   White Mocha{" "}
-                  <span className="text-[12px] font-normal">
-                    with Chocolate
-                  </span>
                 </div>
                 <div className="px-2 ">
                   Indulge in the creamy richness of a white chocolate mocha,
@@ -606,9 +602,6 @@ const Home = () => {
                 <img src={best2} className="w-full" />
                 <div className="px-2 py-4 font-semibold">
                   Cappuccino{" "}
-                  <span className="text-[12px] font-normal">
-                    with Chocolate
-                  </span>
                 </div>
                 <div className="px-2 ">
                   Savor our Cappuccino, where frothy steamed milk meets robust
@@ -766,40 +759,43 @@ const Home = () => {
             OUR GUESTBOOK
           </div>
           <div className="hidden md:flex justify-center items-end mt-12 text-[15px]">
-            <div className="test1 relative flex flex-col items-center bg-[#191919] text-[#938E8E] h-[240px] w-[32%]">
+            <div className="test1 relative flex flex-col items-center bg-[#191919] text-[#938E8E] h-[260px] w-[32%]">
               <img src={quote} className="test11 size-12 mt-8" />
               <div className="test11 mt-6 px-4 text-center">
-                Awesome session! Learned heaps and met cool folks. Can't wait to
-                brew like a pro at home!
+              "Best Place to get your flavorful cup of coffee and I mean Black Coffee 🙌"
               </div>
               <div className="flex flex-col items-center absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
-                <img src={rev1} className="test11 size-24" />
-                <div className="test11 mt-2">Bijak Kumar</div>
-                <div className="test11">Yoga Instructor</div>
+                <div className="test11 size-24 overflow-hidden rounded-full">
+                  <img src={rev1} className=" w-full object-fill" />
+                </div>
+                <div className="test11 mt-2">Neeraj Pathak</div>
+                <div className="test11">Zura Co Founder & Sailor</div>
               </div>
             </div>
-            <div className="test2 relative flex flex-col items-center bg-[#1A2C1E] drop-shadow-2xl h-[280px] w-[36%]">
+            <div className="test2 relative flex flex-col items-center bg-[#1A2C1E] drop-shadow-2xl h-[300px] w-[36%]">
               <img src={quote} className="test22 size-12 mt-8" />
               <div className="test22 mt-6 px-4 text-center text-[17.5px] ">
-                "Superb experience! Great vibes, great coffee, great people.
-                10/10 would recommend!"
+                "Coffee Therapy’s Iced Latte and Hot Chocolate are the best in town! Each sip is a perfect blend of comfort and delight, making every visit a a real therapy. ♥"
               </div>
               <div className="flex flex-col items-center absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
-                <img src={rev2} className="test22 size-24" />
-                <div className="test22 mt-2">Dheeraj Jadhav</div>
-                <div className="test22 ">Architect</div>
+                <div className="test22 size-24 overflow-hidden rounded-full">
+                  <img src={rev2} className=" w-full object-fill" />
+                </div>
+                <div className="test22 mt-2">Mudra ( The Super Chatori)</div>
+                <div className="test22 ">Food Blogger</div>
               </div>
             </div>
-            <div className="test3 relative flex flex-col items-center bg-[#191919] text-[#938E8E] h-[240px] w-[32%]">
+            <div className="test3 relative flex flex-col items-center bg-[#191919] text-[#938E8E] h-[260px] w-[32%]">
               <img src={quote} className="test33 size-12 mt-8" />
               <div className="test33 mt-6 px-4 text-center">
-                Top-notch! Informative, fun, and delicious. A must-try for any
-                coffee lover!
+              "Coffee therapy - means a comfort,happy  and warm space.i spent time there reading ,having best coffee and yes lots of outing with friends. Place is 5✨✨✨"
               </div>
               <div className="flex flex-col items-center absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
-                <img src={rev3} className="test33 size-24" />
-                <div className="test33 mt-2">Suresh Kumar Maurya</div>
-                <div className="test33">Student </div>
+                <div className="test33 size-24 overflow-hidden rounded-full">
+                  <img src={rev3} className=" w-full object-fill" />
+                </div>
+                <div className="test33 mt-2">Monica Dubey</div>
+                {/* <div className="test33">Student </div> */}
               </div>
             </div>
           </div>
@@ -810,37 +806,40 @@ const Home = () => {
             <div className="relative mb-28 bg-[#1A2C1E] h-[200px] mx-auto">
               <img src={quote} className="size-7 mx-auto mt-6" />
               <div className="mt-4 px-6 text-center text-sm">
-                "Superb experience! Great vibes, great coffee, great people.
-                10/10 would recommend!"
+                "Coffee Therapy’s Iced Latte and Hot Chocolate are the best in town! Each sip is a perfect blend of comfort and delight, making every visit a a real therapy. ♥"
               </div>
               <div className="flex flex-col items-center text-sm absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
-                <img src={rev2} className="size-20" />
-                <div className="mt-2">Dheeraj Jadhav</div>
-                <div>Architect</div>
+                <div className="size-20 overflow-hidden rounded-full">
+                  <img src={rev2} className=" w-full object-fill" />
+                </div>
+                <div className="mt-2">Mudra</div>
+                <div>Food Blogger</div>
               </div>
             </div>
             <div className="relative mb-28 bg-[#191919] h-[200px] ">
               <img src={quote} className="size-7 mx-auto mt-6" />
               <div className="mt-4 px-6 text-center text-sm">
-                Awesome session! Learned heaps and met cool folks. Can't wait to
-                brew like a pro at home!
+              Best Place to get your flavorful cup of coffee and I mean Black Coffee 🙌
               </div>
               <div className="flex flex-col items-center text-sm absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
-                <img src={rev1} className="size-20" />
-                <div className="mt-2">Bijak Kumar</div>
-                <div>Yoga Instructor</div>
+                <div className="size-20 overflow-hidden rounded-full">
+                  <img src={rev1} className=" w-full object-fill" />
+                </div>
+                <div className="mt-2">Neeraj Pathak</div>
+                <div>Zura Co Founder & Sailor</div>
               </div>
             </div>
             <div className="relative mb-28 bg-[#191919] h-[200px] ">
               <img src={quote} className="size-7 mx-auto mt-6" />
               <div className="mt-4 px-6 text-center text-sm">
-                Top-notch! Informative, fun, and delicious. A must-try for any
-                coffee lover!
+              Coffee therapy - means a comfort,happy  and warm space.i spent time there reading ,having best coffee and yes lots of outing with friends. Place is 5✨✨✨
               </div>
               <div className="flex flex-col items-center text-sm absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
-                <img src={rev3} className="size-20" />
-                <div className="mt-2">Suresh Kumar Maurya</div>
-                <div>Student </div>
+                <div className="size-20 overflow-hidden rounded-full">
+                  <img src={rev3} className=" w-full object-fill" />
+                </div>
+                <div className="mt-2">Monica Dubey</div>
+                {/* <div>Student </div> */}
               </div>
             </div>
           </Slider>
@@ -865,28 +864,40 @@ const Home = () => {
             </a>
           </div>
           <div className="mt-12 flex w-full md:gap-8 justify-center">
-            <a href="https://www.instagram.com/p/CrC5oD-Jy0f/?igsh=c2ZkZzExMG5hbmw0&img_index=1">
+            <a 
+              href="https://www.instagram.com/p/CrC5oD-Jy0f/?igsh=c2ZkZzExMG5hbmw0&img_index=1" 
+              className="ig1 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all overflow-hidden flex items-center justify-center"
+            >
               <img
                 src={dummy1}
-                className="ig1 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+                className="object-fill"
               />
             </a>
-            <a href="https://www.instagram.com/p/C4gA6CGvoIj/?igsh=andnY3IwdGI0cDBt">
+            <a 
+              href="https://www.instagram.com/p/C4gA6CGvoIj/?igsh=andnY3IwdGI0cDBt" 
+              className="ig2 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all overflow-hidden flex items-center justify-center"
+            >
               <img
                 src={dummy2}
-                className="ig2 border size-[150px] min-[390px]:size-[180px] sm:size-[250px] hover:drop-shadow-xl transition-all"
+                className="object-fill"
               />
             </a>
-            <a href="https://www.instagram.com/p/C7desYoP9yO/?igsh=c2x1cm5pYmsyNHIz">
+            <a 
+              href="https://www.instagram.com/p/C7desYoP9yO/?igsh=c2x1cm5pYmsyNHIz" 
+              className="ig3 border hidden min-[900px]:flex size-[250px] hover:drop-shadow-xl transition-all overflow-hidden  items-center justify-center"
+            >
               <img
                 src={dummy3}
-                className="ig3 border hidden min-[900px]:block size-[250px] hover:drop-shadow-xl transition-all"
+                className="object-fill"
               />
             </a>
-            <a href="https://www.instagram.com/p/C7YbuB3Pp0D/?igsh=aW5ucHgwZWNhbm5q">
+            <a 
+              href="https://www.instagram.com/p/C7YbuB3Pp0D/?igsh=aW5ucHgwZWNhbm5q" 
+              className="ig4 border hidden xl:flex size-[250px] hover:drop-shadow-xl transition-all overflow-hidden  items-center justify-center"
+            >
               <img
                 src={dummy4}
-                className="ig4 border hidden xl:block size-[250px] hover:drop-shadow-xl transition-all"
+                className="object-fill"
               />
             </a>
           </div>
