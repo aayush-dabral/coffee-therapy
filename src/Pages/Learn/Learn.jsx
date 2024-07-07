@@ -386,9 +386,8 @@ const Learn = () => {
                     onClick={() => setFarmView(true)}
                     className=" underline underline-offset-4 "
                   >
-                    Read More
+                    Read More...
                   </div>
-                  <div className="no-underline">v</div>
                 </div>
               ) : (
                 <div className="flex justify-center gap-2 w-full ">
@@ -396,9 +395,8 @@ const Learn = () => {
                     onClick={() => setFarmView(false)}
                     className=" underline underline-offset-4 "
                   >
-                    Read Less
+                    Read Less...
                   </div>
-                  <div className="no-underline">v</div>
                 </div>
               )}
             </div>
