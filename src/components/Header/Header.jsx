@@ -4,6 +4,7 @@ import { navBarMenuItems } from '../../utils/routes';
 
 import menuOpen from "../../assets/images/icons/openMenu.png"
 import cross from "../../assets/images/icons/cross.png"
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     // const pathname = usePathname();
@@ -56,13 +57,14 @@ const Header = () => {
               </div>
               <div className="flex flex-col gap-y-8 px-6 py-8 w-full items-start">
                 {navBarMenuItems.map((item) => (
-                  <a
+                  <Link
                     className={`text-white flex justify-start gap-x-8 text-[1.2rem] items-center w-full px-4 py-2 leading-4 text-end bor der-b-2 bord er-white/50`}
                     key={item.link}
-                    href={item.link}
+                    to={item.link}
+                    as={NavLink}
                   >
                     <span>{item?.title}</span>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
