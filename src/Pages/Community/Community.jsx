@@ -347,7 +347,7 @@ const Community = () => {
       </div>
 
       <div
-        className="flex flex-col justify-center items-center mx-auto sm:py-24 pb-20 text-white bg-cover bg-center"
+        className="flex flex-col overflow-hidden justify-center items-center mx-auto sm:py-24 pb-20 text-white bg-cover bg-center"
         style={{ backgroundImage: `url(${brewBg})` }}
       >
         <div className="w-[80%] flex flex-col items-center sm:items-end">
