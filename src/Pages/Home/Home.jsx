@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Tooltip } from 'react-tooltip'
 import 'react-tooltip/dist/react-tooltip.css'
 
-import homeBg from "../../assets/images/backgrounds/homeBg.png";
+import homeBg from "../../assets/images/backgrounds/homeBg.jpg";
 import logo from "../../assets/images/ctLogo.png";
 import ourStory from "../../assets/images/home/ourStory.png";
 import bestsellersCover from "../../assets/images/home/bestsellersCover.webp";
@@ -504,19 +504,23 @@ const Home = () => {
         </Tooltip>
         {/* Hero Section  */}
         <div
-          className="relative h-screen w-full bg-cover bg-center text-white font-poppins"
-          style={{ backgroundImage: `url(${homeBg})` }}
+          className="relative h-screen w-full bg-cover bg-home_small_banner sm:bg-home_large_banner bg-center text-white font-poppins"
+          // style={{ backgroundImage: `url(${homeBg})` }}
         >
           <div className="absolute left-[8%] sm:left-[10%] top-[35%] sm:top-[48%] transform -translate-y-1/2">
-            <div className="homeText overflow-hidden text-[80px] sm:text-[120px] leading-none font-anton">
+            <div className="homeText overflow-hidden text-[80px] sm:text-[120px] leading-none font-anton text-wrap">
               COFFEE
               <br />
               THERAPY
               <br />
               <span className="flex items-center gap-6">
                 ARTISAN
-                <img src={logo} className="size-24" />
+                <img src={logo} className="size-16 sm:size-24" />
               </span>
+              {/* <span className="sm:hidden">
+                
+              <img src={logo} className="sm:hidden size-24" />
+              </span> */}
             </div>
             <div
               ref={homeText1}

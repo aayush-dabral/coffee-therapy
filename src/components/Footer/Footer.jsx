@@ -16,14 +16,14 @@ const Footer = () => {
     //   {item?.title}
     //   <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white"></span>
     // </a>
-    <a 
+    <div
       className='text-sm sm:text-base transition-all cursor-pointer group duration-300'
       key={item.link}
-      href={item.link}  
+      onClick={() => navigate(item.link)}
     >
       {item?.title}
       <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-white"></span>
-    </a>
+    </div>
   ));
   return (
     <div
