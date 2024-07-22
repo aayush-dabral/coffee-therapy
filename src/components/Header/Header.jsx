@@ -28,8 +28,8 @@ const Header = () => {
   
         {!sideOpen && (
           <div onClick={() => navigate("/")} className="flex gap-2 md:w-1/ 3 items-center md:absolut md:top-0 md:left-[47.5% relative md:py-2  py-4 md:px-16 px-8">
-            <img className="md:w-12 w-12" alt="logo" src={logo} />
-            <div className='font-semibold'>COFFEE THERAPY ARTISAN</div>
+            <img className="md:w-12 w-12 cursor-pointer" alt="logo" src={logo} />
+            <div className='font-semibold cursor-pointer'>COFFEE THERAPY ARTISAN</div>
           </div>
         )}
 
@@ -61,7 +61,9 @@ const Header = () => {
                   <div
                     className={`text-white flex justify-start gap-x-8 text-[1.2rem] items-center w-full px-4 py-2 leading-4 text-end bor der-b-2 bord er-white/50`}
                     key={item.link}
-                    onClick={() => navigate(item.link)}
+                    onClick={() => {
+                      setSideOpen(!sideOpen)
+                      navigate(item.link)}}
                   >
                     <span>{item?.title}</span>
                   </div>

@@ -45,8 +45,8 @@ const Contact = () => {
     }
 
     emailjs
-      .sendForm('service_9kn7lba', 'template_u10ohs4', form1.current, {
-        publicKey: '-KDVszjN4YcTjH4PI',
+      .sendForm('service_9zie8or', 'template_510plip', form1.current, {
+        publicKey: 'IDyzo9dbSL4wfO_Dd',
       })
       .then(
         () => {
@@ -65,8 +65,8 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_9kn7lba', 'template_jovjiva', form2.current, {
-        publicKey: '-KDVszjN4YcTjH4PI',
+      .sendForm('service_9zie8or', 'template_ra3vkoe', form2.current, {
+        publicKey: 'IDyzo9dbSL4wfO_Dd',
       })
       .then(
         () => {
@@ -363,6 +363,7 @@ const Contact = () => {
             <div className="mt-">
               <div className="text-[14px]">Name</div>
               <input
+                name="from_name"
                 className="bg-transparent w-full mt-2 border border-[#676767] placeholder:text-[#676767] px-2 py-2 rounded-[4px] text-white"
                 placeholder="Enter your name"
               />
@@ -370,6 +371,7 @@ const Contact = () => {
             <div className="mt-4">
               <div className="text-[14px]">Email</div>
               <input
+                name="user_email"
                 className="bg-transparent w-full mt-2 border border-[#676767] placeholder:text-[#676767] px-2 py-2 rounded-[4px] text-white"
                 placeholder="Enter your email"
               />

@@ -6,7 +6,7 @@ import scrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(scrollTrigger);
 
 import heroBg from "../../assets/images/community/heroBg.png";
-import logo from "../../assets/images/community/logo.png";
+import logo from "../../assets/images/ctLogo2.png";
 import dummy1 from "../../assets/images/home/dummy1.jpeg";
 import dummy2 from "../../assets/images/home/dummy2.jpeg";
 import dummy3 from "../../assets/images/home/dummy3.jpeg";

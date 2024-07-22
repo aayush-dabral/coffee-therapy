@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import gsap from "gsap"
+import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import scrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(scrollTrigger)
+gsap.registerPlugin(scrollTrigger);
 
 import heroBg from "../../assets/images/learn/heroBg.png";
 import espressoBg from "../../assets/images/learn/espressoBg.png";
@@ -19,203 +19,203 @@ const Learn = () => {
   const [farmView, setFarmView] = useState(false);
   const [espressoView, setEspressoView] = useState(false);
 
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  },[])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  useGSAP(() =>{
+  useGSAP(() => {
     gsap.from(".main-screen", {
       scrollTrigger: ".main-screen",
       ease: true,
       opacity: 0,
       delay: 0,
-      duration: 1
-    })
+      duration: 1,
+    });
     gsap.from(".homeText1", {
       scrollTrigger: ".homeText1",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.4
-    })
+      delay: 0.4,
+    });
     gsap.from(".homeText2", {
       scrollTrigger: ".homeText1",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.6
-    })
+      delay: 0.6,
+    });
 
     gsap.from(".summaryheading", {
       scrollTrigger: ".summaryheading",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.2
-    })
+      delay: 0.2,
+    });
     gsap.from(".summaryLine", {
       scrollTrigger: {
         trigger: ".summaryheading",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.2,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".summaryText", {
       scrollTrigger: {
         trigger: ".summaryheading",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.4
-    })
+      delay: 0.4,
+    });
 
     gsap.from(".espHeading", {
       scrollTrigger: ".espHeading",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.2
-    })
+      delay: 0.2,
+    });
     gsap.from(".espLine", {
       scrollTrigger: {
         trigger: ".espLine",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.4,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".espText", {
       scrollTrigger: {
         trigger: ".espText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.6
-    })
-    
+      delay: 0.6,
+    });
+
     gsap.from(".v60Heading", {
       scrollTrigger: ".v60Heading",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.2
-    })
+      delay: 0.2,
+    });
     gsap.from(".v60Line", {
       scrollTrigger: {
         trigger: ".v60Line",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.4,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".v60Buttons", {
       scrollTrigger: ".v60Buttons",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.5
-    })
+      delay: 0.5,
+    });
     gsap.from(".v60Text", {
       scrollTrigger: {
         trigger: ".espText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.6
-    })
+      delay: 0.6,
+    });
 
     gsap.from(".frenchHeading", {
       scrollTrigger: ".frenchHeading",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.2
-    })
+      delay: 0.2,
+    });
     gsap.from(".frenchLine", {
       scrollTrigger: {
         trigger: ".frenchLine",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.4,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".frenchText", {
       scrollTrigger: {
         trigger: ".frenchText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.6
-    })
+      delay: 0.6,
+    });
 
     gsap.from(".coldHeading", {
       scrollTrigger: ".coldHeading",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.2
-    })
+      delay: 0.2,
+    });
     gsap.from(".coldLine", {
       scrollTrigger: {
         trigger: ".coldLine",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.4,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
     gsap.from(".coldText", {
       scrollTrigger: {
         trigger: ".coldText",
-        start: "top 75%", 
+        start: "top 75%",
       },
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.6
-    })
+      delay: 0.6,
+    });
 
     gsap.from(".aeroHeading", {
       scrollTrigger: ".aeroHeading",
       y: 50,
       ease: "circ",
       opacity: 0,
-      delay: 0.2
-    })
+      delay: 0.2,
+    });
     gsap.from(".aeroLine", {
       scrollTrigger: {
         trigger: ".coldLine",
-        start: "top 75%", 
+        start: "top 75%",
       },
       ease: true,
       width: 0,
       opacity: 0,
       delay: 0.4,
-      duration: 0.3
-    })
+      duration: 0.3,
+    });
 
     gsap.from(".aero1", {
       scrollTrigger: {
@@ -224,10 +224,10 @@ const Learn = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.2,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".aero2", {
       scrollTrigger: {
         trigger: ".aero1",
@@ -235,10 +235,10 @@ const Learn = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.3,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".aero3", {
       scrollTrigger: {
         trigger: ".aero1",
@@ -246,10 +246,10 @@ const Learn = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.4,
-      duration: 0.2
-    })
+      duration: 0.2,
+    });
     gsap.from(".aeroText", {
       scrollTrigger: {
         trigger: ".aeroText",
@@ -257,12 +257,12 @@ const Learn = () => {
       },
       y: 30,
       opacity: 0,
-      stagger: 0.05 ,
+      stagger: 0.05,
       delay: 0.2,
-      duration: 0.2
-    })
-  })
-  
+      duration: 0.2,
+    });
+  });
+
   return (
     <div className="main-screen font-poppins text-white">
       <div
@@ -282,7 +282,9 @@ const Learn = () => {
       <div className="mt-12 bg-cover bg-center py-20">
         <div className="flex justify-between items-center w-[90%] sm:w-[80%] mx-auto">
           <div className="text-white">
-            <div className="summaryheading font-anton text-[45.83px]">FARM TO CUP</div>
+            <div className="summaryheading font-anton text-[45.83px]">
+              FARM TO CUP
+            </div>
             <div className="summaryLine w-[30%] sm:w-[9%] h-[2px] text- bg-white -mt-1" />
             <div className="summaryText w-full mt-8 text-justify text-[16.5px] leading-[2.3] my-8">
               Bringing a beautiful cup of coffee to your table needs lot of work
@@ -294,12 +296,17 @@ const Learn = () => {
             <div className="summaryText hidden lg:flex justify-between w-full mt-4 text-pretty text-[16.5px] leading-[1.8]">
               <div className="w-1/3 border-r pr-16 pl-4">
                 <ul className="list-disc">
+                  <li className="mt-8"> Farmers plant coffee plants in a suitable region. </li>
                   <li> Coffee cherries are plucked by hands and sorted. </li>
-                  <li className="mt-8">
+                  <li>
                     {" "}
                     Particular grade is assigned to the harvest according to
                     standards.{" "}
                   </li>
+                </ul>
+              </div>
+              <div className="w-1/3 border-r px-16">
+                <ul className="list-disc">
                   <li className="mt-8">
                     {" "}
                     Cherries are selected for different process so that best
@@ -307,30 +314,27 @@ const Learn = () => {
                     natural, washed & honey. These processes decide what sort of
                     flavor profile the coffee will have.{" "}
                   </li>
-                </ul>
-              </div>
-              <div className="w-1/3 border-r px-16">
-                <ul className="list-disc">
                   <li>
                     {" "}
                     Processed green beans are frozen and sent to the rosters.{" "}
-                  </li>
-                  <li className="mt-8">
-                    {" "}
-                    These green beans are then roasted to different profiles
-                    like light, medium & dark to get desired flavor profile.{" "}
-                  </li>
-                  <li className="mt-8">
-                    {" "}
-                    These roasted beans are then allowed to degas for few days.{" "}
                   </li>
                 </ul>
               </div>
               <div className="w-1/3 pl-16 pr-4">
                 <ul className="list-disc">
+                  
+                <li className="mt-8">
+                    {" "}
+                    These green beans are then roasted to different profiles
+                    like light, medium & dark to get desired flavor profile.{" "}
+                  </li>
+                <li>
+                    {" "}
+                    These roasted beans are then allowed to degas for few days.{" "}
+                  </li>
                   <li>
                     {" "}
-                    Processed green beans are frozen and sent to the rosters.{" "}
+                    Now the beans are ready to be used in different equipment.{" "}
                   </li>
                 </ul>
               </div>
@@ -406,13 +410,13 @@ const Learn = () => {
 
       <div
         className="mt-12 bg-cover bg-top py-20"
-        style={{ backgroundImage: `url(${espressoBg})`}}
+        style={{ backgroundImage: `url(${espressoBg})` }}
       >
         <div className="flex justify-between items-center w-[90%] sm:w-[80%] mx-auto">
           <div className="text-white">
             <div className="espHeading font-anton text-[45.83px]">ESPRESSO</div>
             <div className="espLine w-[30%] sm:w-[9%] h-[2px] text- bg-white -mt-1" />
-            <div className="espText w-full mt-8 text-justify text-[16.5px] leading-[2.3]">
+            <div className="espText w-full mt-8 text- justify text-[16.5px] leading-[2.3]">
               Espresso, the quintessential embodiment of coffee culture, is a
               concentrated shot of caffeinated bliss. Crafted with meticulous
               precision and finesse, it boasts a robust and intense flavor
@@ -425,56 +429,52 @@ const Learn = () => {
               sip.
             </div>
             <div
-                className={`espText transition-all ease-in-out duration-300 overflow-hidden mt-4 ${
-                  espressoView ? "blo ck max-h- [600px]" : "hidd en max-h -0"
-                } `}
-              >
-                Key things to keep in mind while pulling an espresso shot is:
-                <ul className="list-disc pl-4 mt-2">
-                  <li>
-                    Processed green beans are frozen and sent to the rosters.{" "}
-                  </li>
-                  <li className="mt-4">
-                    These green beans are then roasted to different profiles
-                    like light, medium & dark to get desired flavor profile.{" "}
-                  </li>
-                  <li className="mt-4">
-                    These roasted beans are then allowed to degas for few days.{" "}
-                  </li>
-                  <li className="mt-4">
-                    Processed green beans are frozen and sent to the rosters.{" "}
-                  </li>
-                </ul>
-                <br/>
-                Keep in mind these parameters to find a best recipe that works for you and then keep 
-                consistently making same beautiful and rich espresso every time.
-                <br/>
-                These espresso shots are used to make most of our day-to-day coffees like cappuccino, latte, 
-                americano, flat white and a whole lot more.
-              </div>
-            {/* <div className="summaryText sm:hid den mt-8 text-center text-[20.5px] leading-[2.3]">
-              {!espressoView ? (
-                <div className="flex justify-center gap-2 w-full ">
-                  <div
-                    onClick={() => setEspressoView(true)}
-                    className=" underline underline-offset-4 "
-                  >
-                    Read More
-                  </div>
-                  <div className="no-underline">v</div>
-                </div>
-              ) : (
-                <div className="flex justify-center gap-2 w-full ">
-                  <div
-                    onClick={() => setEspressoView(false)}
-                    className=" underline underline-offset-4 "
-                  >
-                    Read Less
-                  </div>
-                  <div className="no-underline">v</div>
-                </div>
-              )}
-            </div> */}
+              className={`espText transition-all ease-in-out duration-300 overflow-hidden mt-4 leading-[2.3] ${
+                espressoView ? "blo ck max-h- [600px]" : "hidd en max-h -0"
+              } `}
+            >
+              Key things to keep in mind while pulling an espresso shot is:
+              <ul className="list-disc pl-4 mt-2">
+                <li>Pressure should be close to 9 bars. </li>
+                <li className="mt-4">
+                  Beans to shot ratio is kept close to 1:2 for it to be called
+                  espresso.{" "}
+                </li>
+                <li className="mt-4">
+                  1:1 shot is called Ristretto and 1:3 shot is called Lungo.{" "}
+                </li>
+                <li className="mt-4">
+                  Fine grind size, which should be calibrated regularly.{" "}
+                </li>
+                <li>
+                  Puck preparation i.e. for a great extraction, even
+                  distribution and level tampering should be done.{" "}
+                </li>
+                <li className="mt-4">
+                  Note the time of the beginning of drip and end of extraction.
+                  It may vary depending on beans and your preference but keep a
+                  track helps in making consistent espresso shot.{" "}
+                </li>
+                <li className="mt-4">
+                  Always pre heat group head and porter filter.{" "}
+                </li>
+                <li className="mt-4">
+                  Measure weight of your shot while extracting.{" "}
+                </li>
+                <li className="mt-4">
+                  You can also look into “preinfusion” to avoid channeling of
+                  shot.{" "}
+                </li>
+              </ul>
+              <br />
+              Keep in mind these parameters to find a best recipe that works for
+              you and then keep consistently making same beautiful and rich
+              espresso every time.
+              <br />
+              These espresso shots are used to make most of our day-to-day
+              coffees like cappuccino, latte, americano, flat white and a whole
+              lot more.
+            </div>
           </div>
         </div>
       </div>
@@ -607,10 +607,7 @@ const Learn = () => {
             FRENCH PRESS
           </div>
           <div className="sm:hidden sm:h-[500px] mr-auto mt-4 sm:-mt-12 overflow-hidden">
-            <img
-              src={french}
-              className="object-fill"
-            />
+            <img src={french} className="object-fill" />
           </div>
           <div className="frenchLine hidden sm:block w-[19%] h-[2px] bg-white sm:-mt-1" />
           <div className="frenchText text-[16.5px] text-justify font-poppins font-light mt-8 ">
@@ -668,7 +665,10 @@ const Learn = () => {
             className="sm:hidden sm:h-[500px] mx-auto mt-4 "
           /> */}
           <div className="sm:hidden sm:h-[500px] mx-auto mt-4  overflow-hidden">
-            <img src={coldBrew} className="h- [550px] size-full object-fill mx-auto" />
+            <img
+              src={coldBrew}
+              className="h- [550px] size-full object-fill mx-auto"
+            />
           </div>
           <div className="coldLine w-[19%] h-[2px] bg-white -mt-1" />
           <div className="coldText text-[17.5px] text-justify font-poppins mt-8 ">
@@ -706,7 +706,10 @@ const Learn = () => {
           </div>
         </div>
         <div className="hidden sm:flex w-[38%] overflow-hidden">
-          <img src={coldBrew} className="h- [550px] size-full object-fill mx-auto" />
+          <img
+            src={coldBrew}
+            className="h- [550px] size-full object-fill mx-auto"
+          />
         </div>
       </div>
 
