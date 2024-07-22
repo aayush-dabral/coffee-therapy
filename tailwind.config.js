@@ -20,6 +20,8 @@ export default {
         'home_small_banner': "url('/images/home/homeSmallBg.png')",
         'community_bg_small': "url('/images/community/heroBgSmall.jpg')",
         'community_bg_large': "url('/images/community/heroBg.png')",
+        'products_bg_small': "url('/images/products/heroBgSmall.png')",
+        'products_bg_large': "url('/images/products/heroBg.png')",
       },
     },
   },

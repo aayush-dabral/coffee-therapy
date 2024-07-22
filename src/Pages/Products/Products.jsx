@@ -114,8 +114,8 @@ const Products = () => {
   return (
     <div className="font-poppins text-white">
       <div
-        className="main-screen relative h-screen w-full bg-cover bg-center text-white font-poppins"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="bg-products_bg_small sm:bg-products_bg_large main-screen relative h-screen w-full bg-cover bg-center text-white font-poppins"
+        // style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute left-[8%] sm:left-[10%] top-[35%] sm:top-[48%] transform -translate-y-1/2">
           <div className="text-[49.44px] sm:text-[74.16px] leading-none font-anton">

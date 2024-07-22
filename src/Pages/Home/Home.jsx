@@ -23,6 +23,8 @@ import quote from "../../assets/images/home/quote.png";
 import rev1 from "../../assets/images/home/rev1.jpg";
 import rev2 from "../../assets/images/home/rev2.jpg";
 import rev3 from "../../assets/images/home/rev3.jpg";
+import rev4 from "../../assets/images/home/rev4.jpg";
+import rev5 from "../../assets/images/home/rev5.jpg";
 import dummy1 from "../../assets/images/home/dummy1.jpeg";
 import dummy2 from "../../assets/images/home/dummy2.jpeg";
 import dummy3 from "../../assets/images/home/dummy3.jpeg";
@@ -807,7 +809,7 @@ const Home = () => {
 
         <div className="md:hidden w-[90%] mt-12 mx-auto">
           <Slider {...settings}>
-            <div className="relative mb-28 bg-[#1A2C1E] h-[200px] mx-auto">
+            <div className="relative mb-28 bg-[#1A2C1E] h-[220px] mx-auto">
               <img src={quote} className="size-7 mx-auto mt-6" />
               <div className="mt-4 px-6 text-center text-sm">
                 "Coffee Therapy’s Iced Latte and Hot Chocolate are the best in town! Each sip is a perfect blend of comfort and delight, making every visit a a real therapy. ♥"
@@ -820,7 +822,7 @@ const Home = () => {
                 <div>Food Blogger</div>
               </div>
             </div>
-            <div className="relative mb-28 bg-[#191919] h-[200px] ">
+            <div className="relative mb-28 bg-[#191919] h-[220px] ">
               <img src={quote} className="size-7 mx-auto mt-6" />
               <div className="mt-4 px-6 text-center text-sm">
               Best Place to get your flavorful cup of coffee and I mean Black Coffee 🙌
@@ -833,7 +835,20 @@ const Home = () => {
                 <div>Zura Co Founder & Sailor</div>
               </div>
             </div>
-            <div className="relative mb-28 bg-[#191919] h-[200px] ">
+            <div className="relative mb-28 bg-[#1A2C1E] h-[220px] mx-auto">
+              <img src={quote} className="size-7 mx-auto mt-6" />
+              <div className="mt-4 px-6 text-center text-sm">
+                "The best coffee experience in Bhopal. Iced cappuccino and Iced latte are my absolute favourite. I highly recommend to visit Coffee Therapy."
+              </div>
+              <div className="flex flex-col items-center text-sm absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
+                <div className="size-20 overflow-hidden rounded-full">
+                  <img src={rev5} className=" w-full object-fill" />
+                </div>
+                <div className="mt-2">Bihu Pal</div>
+                <div>Fitness & Lifestyle</div>
+              </div>
+            </div>
+            <div className="relative mb-28 bg-[#191919] h-[220px] ">
               <img src={quote} className="size-7 mx-auto mt-6" />
               <div className="mt-4 px-6 text-center text-sm">
               Coffee therapy - means a comfort,happy  and warm space.i spent time there reading ,having best coffee and yes lots of outing with friends. Place is 5✨✨✨
@@ -844,6 +859,19 @@ const Home = () => {
                 </div>
                 <div className="mt-2">Monica Dubey</div>
                 {/* <div>Student </div> */}
+              </div>
+            </div>
+            <div className="relative mb-28 bg-[#1A2C1E] h-[220px] mx-auto">
+              <img src={quote} className="size-7 mx-auto mt-6" />
+              <div className="mt-4 px-6 text-center text-sm">
+                "Coffee Therapy is my sanctuary. Perfect brews and amazing Aglio e Olio spaghetti make it my go-to for relaxation and meetings."
+              </div>
+              <div className="flex flex-col items-center text-sm absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-[65%]">
+                <div className="size-20 overflow-hidden rounded-full">
+                  <img src={rev4} className=" w-full object-fill" />
+                </div>
+                <div className="mt-2">Sanskaar Singh</div>
+                <div>Owner Sanskar Webx</div>
               </div>
             </div>
           </Slider>
