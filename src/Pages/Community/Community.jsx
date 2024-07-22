@@ -253,8 +253,8 @@ const Community = () => {
   return (
     <div className="main-screen font-poppins">
       <div
-        className=" flex flex-col items-center pt-8 sm:pt-0 justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-bottom text-white text-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="bg-community_bg_small sm:bg-community_bg_large flex flex-col items-center pt-8 sm:pt-0 justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-bottom text-white text-center"
+        // style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="homeText1 text-[49.44px] sm:text-[74.16px] font-anton">
           COFFEE CULTURE COLLECTIVE
@@ -280,8 +280,8 @@ const Community = () => {
             community.
           </div>
         </div>
-        <div className="sm:w-[38%]">
-          <img src={logo} className="h-[300px] sm:h-[400px]" />
+        <div className="sm:w-[38%] mt-4 sm:mt-0">
+          <img src={logo} className="h-[250px] sm:h-[400px]" />
         </div>
       </div>
 
