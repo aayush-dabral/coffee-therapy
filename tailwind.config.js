@@ -22,6 +22,8 @@ export default {
         'community_bg_large': "url('/images/community/heroBg.png')",
         'products_bg_small': "url('/images/products/heroBgSmall.png')",
         'products_bg_large': "url('/images/products/heroBg.png')",
+        'learn_bg_small': "url('/images/learn/heroBgSmall.jpg')",
+        'learn_bg_large': "url('/images/learn/heroBg.png')",
       },
     },
   },

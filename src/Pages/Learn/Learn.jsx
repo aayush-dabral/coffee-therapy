@@ -266,8 +266,8 @@ const Learn = () => {
   return (
     <div className="main-screen font-poppins text-white">
       <div
-        className="flex flex-col items-center justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-center text-white text-center"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="bg-learn_bg_small sm:bg-learn_bg_large flex flex-col items-center justify-center h-[550px] sm:h-[500px] w-full bg-cover bg-center text-white text-center"
+        // style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="homeText1 text-[49.44px] sm:text-[74.16px] font-anton">
           BREWING BASICS
