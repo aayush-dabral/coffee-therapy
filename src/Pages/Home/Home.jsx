@@ -506,7 +506,7 @@ const Home = () => {
         </Tooltip>
         {/* Hero Section  */}
         <div
-          className="relative h-screen w-full bg-cover bg-home_large_banner bg-center text-white font-poppins"
+          className="relative h-screen w-full bg-cover bg-home_small_banner sm:bg-home_large_banner bg-center text-white font-poppins"
           // style={{ backgroundImage: `url(${homeBg})` }}
         >
           <div className="absolute left-[8%] sm:left-[10%] top-[35%] sm:top-[48%] transform -translate-y-1/2">

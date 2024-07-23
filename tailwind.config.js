@@ -17,7 +17,7 @@ export default {
       },
       backgroundImage: {
         'home_large_banner': "url('/images/home/homeBg.jpg')",
-        'home_small_banner': "url('/images/home/homeSmallBg.png')",
+        'home_small_banner': "url('/images/home/homeBgSmall.jpg')",
         'community_bg_small': "url('/images/community/heroBgSmall.jpg')",
         'community_bg_large': "url('/images/community/heroBg.png')",
         'products_bg_small': "url('/images/products/heroBgSmall.png')",
