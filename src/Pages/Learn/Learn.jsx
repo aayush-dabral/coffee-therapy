@@ -342,7 +342,8 @@ const Learn = () => {
 
             <div className="summaryText sm:hidden w-full pl-4  text-justify text-[16.5px] leading-[2.3]">
               <ul className="list-disc list-inside">
-                <li> Coffee cherries are plucked by hands and sorted. </li>
+                <li> Farmers plant coffee plants in a suitable region. </li>
+                <li className="mt-4"> Coffee cherries are plucked by hands and sorted. </li>
                 <li className="mt-4">
                   {" "}
                   Particular grade is assigned to the harvest according to
@@ -377,7 +378,7 @@ const Learn = () => {
                   </li>
                   <li className="mt-4">
                     {" "}
-                    Processed green beans are frozen and sent to the rosters.{" "}
+                    Now the beans are ready to be used in different equipment.{" "}
                   </li>
                 </ul>
               </div>
